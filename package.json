@@ -8,11 +8,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run copy:generated",
+    "copy:generated": "node scripts/copy-generated.js",
     "images:generate": "node scripts/images-generate.js",
     "generate:og": "node scripts/generate-og.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "deploy:docs": "npm run build && rm -rf docs && mv dist docs"
+    "deploy:docs": "npm run build"
   },
   "dependencies": {
     "react": "^19.2.7",
