@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { withBase } from '../lib/site-paths'
 
 export default function Head({ frontmatter }) {
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Head({ frontmatter }) {
     upsertMeta('name', 'description', frontmatter?.description || 'Rofamet — konstrukcje stalowe i bramy przemysłowe')
     upsertMeta('property', 'og:title', title)
     upsertMeta('property', 'og:description', frontmatter?.description || '')
-    upsertMeta('property', 'og:image', frontmatter?.og_image || '/assets/generated/og/home.png')
+    upsertMeta('property', 'og:image', frontmatter?.og_image || withBase('assets/generated/og/home.png'))
     upsertMeta('name', 'twitter:card', 'summary_large_image')
     upsertMeta('property', 'og:locale', 'pl_PL')
 
