@@ -1,0 +1,43 @@
+@import "./tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base typographic and layout tokens */
+body {
+	background: var(--color-surface);
+	color: var(--color-text);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.45;
+	font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 { color: var(--color-text); }
+
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { text-decoration: underline; opacity: .95; }
+
+/* Primary CTA helper */
+.btn-primary {
+	background: var(--color-accent);
+	color: var(--color-on-accent);
+	padding: .5rem 1rem;
+	border-radius: .375rem;
+	font-weight: 600;
+	display: inline-block;
+}
+
+/* Header states for transparent-over-hero then solid on scroll */
+.header-transparent { background: transparent; }
+.header-solid { background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+
+/* Card helpers (flat / bordered) */
+.card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: .5rem; overflow: hidden; }
+.card-media { overflow: hidden; }
+.card-media img { transition: transform .32s ease; display: block; width: 100%; height: 100%; object-fit: cover; }
+.card:hover .card-media img, .card:focus-within .card-media img { transform: scale(1.03); }
+
+/* Utility for max content width */
+.site-container { max-width: 1200px; margin-left: auto; margin-right: auto; }

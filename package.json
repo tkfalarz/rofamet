@@ -1,0 +1,31 @@
+{
+  "name": "rofamet",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "20"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "images:generate": "node scripts/images-generate.js",
+    "generate:og": "node scripts/generate-og.js",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "deploy:docs": "npm run build && rm -rf docs && mv dist docs"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "gray-matter": "^4.0.3",
+    "marked": "^5.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.15",
+    "sharp": "^0.35.1",
+    "tailwindcss": "^3.2.7",
+    "vite": "^8.0.16"
+  }
+}
