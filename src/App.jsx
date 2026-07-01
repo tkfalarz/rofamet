@@ -3,21 +3,16 @@ import Head from './components/Head'
 import Home, { frontmatter as homeFrontmatter } from './pages/Home'
 import Portfolio, { frontmatter as portfolioFrontmatter } from './pages/Portfolio'
 import logoMark from '../assets/raw/favicon.svg'
-import { stripBasePath, toBrowserPath } from './lib/site-paths'
 import './styles/globals.css'
 
-function normalizePath(p) {
-  try {
-    const url = new URL(p, location.origin)
-    const path = (url.pathname || '/').replace(/\/\/+$/, '') || '/'
-    return stripBasePath(path)
-  } catch (e) {
-    return '/'
-  }
+function normalizePath(hash) {
+  const raw = hash.startsWith('#') ? hash.slice(1) : hash
+  const path = raw || '/'
+  return path.replace(/\/\/+$/, '') || '/'
 }
 
 export default function App(){
-  const initialRoute = normalizePath(window.location.pathname)
+  const initialRoute = normalizePath(window.location.hash)
   const [route, setRoute] = useState(initialRoute)
   const [frontmatter, setFrontmatter] = useState({})
   const [isHeaderTransparent, setIsHeaderTransparent] = useState(false)
@@ -29,11 +24,11 @@ export default function App(){
     else setFrontmatter({})
   }, [route])
 
-  // handle back/forward browser buttons
+  // handle browser hash changes for SPA navigation
   useEffect(() => {
-    const onPop = () => setRoute(normalizePath(window.location.pathname))
-    window.addEventListener('popstate', onPop)
-    return () => window.removeEventListener('popstate', onPop)
+    const onHashChange = () => setRoute(normalizePath(window.location.hash))
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
 
   // header transparency when over hero (transparent) and solid after scroll
@@ -51,45 +46,12 @@ export default function App(){
     return () => window.removeEventListener('scroll', updateHeader)
   }, [route])
 
-  // Intercept internal link clicks and navigate via History API (SPA navigation)
-  useEffect(() => {
-    function onDocClick(e) {
-      const a = e.target.closest && e.target.closest('a')
-      if (!a) return
-      const href = a.getAttribute('href')
-      if (!href) return
-      const target = a.getAttribute('target')
-      const download = a.getAttribute('download')
-      if (target && target !== '_self') return
-      if (download) return
-      if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return
-      try {
-        const url = new URL(href, location.href)
-        if (url.origin !== location.origin) return
-        // Only handle same-origin path navigation
-        e.preventDefault()
-        const newPath = normalizePath(url.pathname + url.search + url.hash)
-        if (newPath !== route) {
-          history.pushState({}, '', toBrowserPath(newPath))
-          setRoute(newPath)
-        } else {
-          // same path: ensure state updates if needed
-          setRoute(newPath)
-        }
-      } catch (err) {
-        // ignore invalid URLs
-      }
-    }
-    document.addEventListener('click', onDocClick)
-    return () => document.removeEventListener('click', onDocClick)
-  }, [route])
-
   return (
     <main className="site-shell">
       <Head frontmatter={frontmatter} />
       <header className={`site-header ${isHeaderTransparent ? 'header-transparent' : 'header-solid'}`}>
         <div className="header-inner">
-          <a href="./" className="brand-mark" aria-label="Rofamet - strona główna">
+          <a href="#/" className="brand-mark" aria-label="Rofamet - strona główna">
             <span className="brand-badge" aria-hidden="true">
               <img className="brand-badge-image" src={logoMark} alt="" />
             </span>
@@ -100,8 +62,8 @@ export default function App(){
           </a>
 
           <nav className="site-nav" aria-label="Główna nawigacja">
-            <a href="./">Start</a>
-            <a href="./portfolio">Realizacje</a>
+            <a href="#/">Start</a>
+            <a href="#/portfolio">Realizacje</a>
             <a className="nav-cta" href="mailto:robertos242@onet.pl">Kontakt</a>
           </nav>
         </div>

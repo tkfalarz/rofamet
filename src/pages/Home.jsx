@@ -40,7 +40,7 @@ export default function Home() {
             <h1 className="hero-title">Stalowe realizacje, które porządkują przestrzeń.</h1>
             <p className="hero-description">{frontmatter.description}</p>
             <div className="hero-actions">
-              <a href="./portfolio" className="btn-primary">Zobacz realizacje</a>
+              <a href="#/portfolio" className="btn-primary">Zobacz realizacje</a>
               <a href="mailto:robertos242@onet.pl" className="btn-secondary">Napisz do nas</a>
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
             <p className="panel-kicker">Portfolio</p>
             <h2 className="panel-title">Realizacje dopasowane do domu, firmy i inwestycji.</h2>
             <p className="panel-body">Zobacz wybrane bramy, ogrodzenia i stalowe konstrukcje przygotowane z naciskiem na trwałość, detal i sprawny montaż.</p>
-            <a href="./portfolio" className="panel-link">Przejdź do portfolio</a>
+            <a href="#/portfolio" className="panel-link">Przejdź do portfolio</a>
           </article>
 
           <article className="panel">
