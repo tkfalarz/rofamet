@@ -1,13 +1,16 @@
 import React from 'react'
+import { withBase } from '../lib/site-paths'
+
+const asset = value => withBase(value)
 
 export const frontmatter = {
   title: 'Rofamet — Strona główna',
   description: 'Rofamet — konstrukcje stalowe, bramy i ogrodzenia. Projekt, produkcja oraz montaż — realizacje dla klientów indywidualnych i firm.',
-  og_image: 'assets/generated/og/home.png',
+  og_image: asset('assets/generated/og/home.png'),
   hero: {
-    src: 'assets/generated/photo-2026-06-12-16-01-41-1920.webp',
+    src: asset('assets/generated/photo-2026-06-12-16-01-41-1920.webp'),
     srcset:
-      'assets/generated/photo-2026-06-12-16-01-41-320.webp 320w, assets/generated/photo-2026-06-12-16-01-41-640.webp 640w, assets/generated/photo-2026-06-12-16-01-41-1280.webp 1280w, assets/generated/photo-2026-06-12-16-01-41-1920.webp 1920w',
+      `${asset('assets/generated/photo-2026-06-12-16-01-41-320.webp')} 320w, ${asset('assets/generated/photo-2026-06-12-16-01-41-640.webp')} 640w, ${asset('assets/generated/photo-2026-06-12-16-01-41-1280.webp')} 1280w, ${asset('assets/generated/photo-2026-06-12-16-01-41-1920.webp')} 1920w`,
     sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
     alt_pl: 'Brama stalowa przed warsztatem'
   }
@@ -37,7 +40,7 @@ export default function Home() {
             <h1 className="hero-title">Stalowe realizacje, które porządkują przestrzeń.</h1>
             <p className="hero-description">{frontmatter.description}</p>
             <div className="hero-actions">
-              <a href="/portfolio" className="btn-primary">Zobacz realizacje</a>
+              <a href="./portfolio" className="btn-primary">Zobacz realizacje</a>
               <a href="mailto:robertos242@onet.pl" className="btn-secondary">Napisz do nas</a>
             </div>
           </div>
@@ -50,7 +53,7 @@ export default function Home() {
             <p className="panel-kicker">Portfolio</p>
             <h2 className="panel-title">Realizacje dopasowane do domu, firmy i inwestycji.</h2>
             <p className="panel-body">Zobacz wybrane bramy, ogrodzenia i stalowe konstrukcje przygotowane z naciskiem na trwałość, detal i sprawny montaż.</p>
-            <a href="/portfolio" className="panel-link">Przejdź do portfolio</a>
+            <a href="./portfolio" className="panel-link">Przejdź do portfolio</a>
           </article>
 
           <article className="panel">

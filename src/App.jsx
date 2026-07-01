@@ -3,13 +3,14 @@ import Head from './components/Head'
 import Home, { frontmatter as homeFrontmatter } from './pages/Home'
 import Portfolio, { frontmatter as portfolioFrontmatter } from './pages/Portfolio'
 import logoMark from '../assets/raw/favicon.svg'
+import { stripBasePath, toBrowserPath } from './lib/site-paths'
 import './styles/globals.css'
 
 function normalizePath(p) {
   try {
     const url = new URL(p, location.origin)
     const path = (url.pathname || '/').replace(/\/\/+$/, '') || '/'
-    return path
+    return stripBasePath(path)
   } catch (e) {
     return '/'
   }
@@ -69,7 +70,7 @@ export default function App(){
         e.preventDefault()
         const newPath = normalizePath(url.pathname + url.search + url.hash)
         if (newPath !== route) {
-          history.pushState({}, '', url.pathname + url.search + url.hash)
+          history.pushState({}, '', toBrowserPath(newPath))
           setRoute(newPath)
         } else {
           // same path: ensure state updates if needed
@@ -88,7 +89,7 @@ export default function App(){
       <Head frontmatter={frontmatter} />
       <header className={`site-header ${isHeaderTransparent ? 'header-transparent' : 'header-solid'}`}>
         <div className="header-inner">
-          <a href="/" className="brand-mark" aria-label="Rofamet - strona główna">
+          <a href="./" className="brand-mark" aria-label="Rofamet - strona główna">
             <span className="brand-badge" aria-hidden="true">
               <img className="brand-badge-image" src={logoMark} alt="" />
             </span>
@@ -99,8 +100,8 @@ export default function App(){
           </a>
 
           <nav className="site-nav" aria-label="Główna nawigacja">
-            <a href="/">Start</a>
-            <a href="/portfolio">Realizacje</a>
+            <a href="./">Start</a>
+            <a href="./portfolio">Realizacje</a>
             <a className="nav-cta" href="mailto:robertos242@onet.pl">Kontakt</a>
           </nav>
         </div>
