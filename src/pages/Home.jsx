@@ -29,7 +29,7 @@ const homeHero = mainHeroEntry
 
 export const frontmatter = {
   title: 'Rofamet — Strona główna',
-  description: 'Projektuję i wykonuję konstrukcje stalowe, bramy oraz ogrodzenia. Tworzę realizacje dla domów, firm i inwestycji z naciskiem na trwałość i estetykę.',
+  description: 'Projektuję i wykonuję balkony francuskie, balustrady, poręcze, konstrukcje stalowe, wycinanki plazmą CNC i meble loft. Pełny zakres od projektu po montaż.',
   og_image: asset('assets/generated/og/home.png'),
   hero: homeHero
 }
@@ -76,8 +76,23 @@ export default function Home({ highlightContact = false }) {
 
           <article className="panel">
             <p className="panel-kicker">Zakres prac</p>
-            <h2 className="panel-title">Od projektu po gotowy montaż.</h2>
-            <p className="panel-body">Projektowanie, produkcję, malowanie proszkowe i montaż prowadzę jako jeden proces, dzięki czemu realizacja jest spójna i przewidywalna.</p>
+            <h2 className="panel-title">Obszary mojej specializacji</h2>
+            <p className="panel-body">
+              <ul style={{marginTop: '0.5rem', paddingLeft: '1.2rem', listStyle: 'disc', listStylePosition: 'inside'}}>
+                <li>Balkony francuskie</li>
+                <li>Balustrady, barierki, poręcze</li>
+                <li>Mała architektura ogrodowa</li>
+                <li>Konstrukcje stalowe</li>
+                <li>Cięcie blach plazmą CNC</li>
+                <li>Meble loft</li>
+              </ul>
+            </p>
+          </article>
+
+          <article className="panel">
+            <p className="panel-kicker">Obsługuję teren</p>
+            <h2 className="panel-title">Projekty i montaż w okolicach Biecza.</h2>
+            <p className="panel-body">Realizuję prace dla klientów w Bieczu i okolicznych obszarach. Posiadam doświadczenie w pracach terenowych i komunikacji z lokalnymi partnerami.</p>
           </article>
 
           <article id="contact-tile" className={`panel contact-panel ${highlightContact ? 'contact-panel-highlight' : ''}`}>

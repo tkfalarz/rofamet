@@ -326,7 +326,7 @@ a:focus-visible {
 }
 
 .panel {
-	grid-column: span 4;
+	grid-column: span 6;
 	min-height: 100%;
 	padding: 1.75rem;
 	background: rgba(var(--color-surface-rgb), 0.88);
