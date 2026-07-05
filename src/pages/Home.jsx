@@ -59,7 +59,7 @@ export default function Home() {
             <p className="hero-description">{frontmatter.description}</p>
             <div className="hero-actions">
               <a href="#/portfolio" className="btn-primary">Zobacz realizacje</a>
-              <a href="mailto:robertos242@onet.pl" className="btn-secondary">Napisz do nas</a>
+              <a href="mailto:rofamet@op.pl" className="btn-secondary">Napisz do nas</a>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Home() {
           <article className="panel">
             <p className="panel-kicker">Kontakt</p>
             <h2 className="panel-title">Porozmawiajmy o Twojej realizacji.</h2>
-            <p className="panel-body">Telefon: <strong>+48 513 642 695</strong><br />E-mail: <a href="mailto:robertos242@onet.pl" className="panel-link">robertos242@onet.pl</a></p>
+            <p className="panel-body">Telefon: <strong>+48 513 642 695</strong><br />E-mail: <a href="mailto:rofamet@op.pl" className="panel-link">rofamet@op.pl</a></p>
           </article>
         </div>
       </section>

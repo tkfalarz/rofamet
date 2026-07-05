@@ -64,7 +64,7 @@ export default function App(){
           <nav className="site-nav" aria-label="Główna nawigacja">
             <a href="#/">Start</a>
             <a href="#/portfolio">Realizacje</a>
-            <a className="nav-cta" href="mailto:robertos242@onet.pl">Kontakt</a>
+            <a className="nav-cta" href="mailto:rofamet@op.pl">Kontakt</a>
           </nav>
         </div>
       </header>

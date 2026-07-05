@@ -33,7 +33,7 @@ export default function Head({ frontmatter }) {
       "name": "Rofamet",
       "url": "https://rofamet.pl",
       "telephone": "+48-000-000-000",
-      "email": "info@rofamet.pl",
+      "email": "rofamet@op.pl",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "ul. Example 1",
