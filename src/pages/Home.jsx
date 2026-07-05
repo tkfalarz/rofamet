@@ -1,19 +1,37 @@
 import React from 'react'
+
+import manifest from '../../assets/generated/manifest.json'
 import { withBase } from '../lib/site-paths'
 
 const asset = value => withBase(value)
+
+function buildResponsiveImageData(imageEntry) {
+  const variants = Array.isArray(imageEntry) ? imageEntry : imageEntry?.variants ?? []
+  const srcset = variants.map(variant => `${withBase(variant.webp)} ${variant.width}w`).join(', ')
+  const src = withBase(variants[variants.length - 1]?.webp ?? '')
+
+  return { src, srcset }
+}
+
+const mainHeroEntry = manifest['main-hero.jpg']
+const homeHero = mainHeroEntry
+  ? {
+      ...buildResponsiveImageData(mainHeroEntry),
+      sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
+      alt_pl: 'Brama stalowa'
+    }
+  : {
+      src: asset('assets/raw/main-hero.jpg'),
+      srcset: asset('assets/raw/main-hero.jpg'),
+      sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
+      alt_pl: 'Brama stalowa'
+    }
 
 export const frontmatter = {
   title: 'Rofamet — Strona główna',
   description: 'Rofamet — konstrukcje stalowe, bramy i ogrodzenia. Projekt, produkcja oraz montaż — realizacje dla klientów indywidualnych i firm.',
   og_image: asset('assets/generated/og/home.png'),
-  hero: {
-    src: asset('assets/generated/photo-2026-06-12-16-01-41-1920.webp'),
-    srcset:
-      `${asset('assets/generated/photo-2026-06-12-16-01-41-320.webp')} 320w, ${asset('assets/generated/photo-2026-06-12-16-01-41-640.webp')} 640w, ${asset('assets/generated/photo-2026-06-12-16-01-41-1280.webp')} 1280w, ${asset('assets/generated/photo-2026-06-12-16-01-41-1920.webp')} 1920w`,
-    sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
-    alt_pl: 'Brama stalowa przed warsztatem'
-  }
+  hero: homeHero
 }
 
 export default function Home() {

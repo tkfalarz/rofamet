@@ -1,40 +1,97 @@
 import React, { useEffect, useMemo, useState } from 'react'
 
 import manifest from '../../assets/generated/manifest.json'
+import { defaultCategory, filterOptions, getCategoryLabel } from '../lib/gallery-categories'
 import { withBase } from '../lib/site-paths'
 
 const asset = value => withBase(value)
+
+function buildResponsiveImageData(imageEntry) {
+  const variants = Array.isArray(imageEntry) ? imageEntry : imageEntry?.variants ?? []
+  const srcset = variants.map(variant => `${withBase(variant.webp)} ${variant.width}w`).join(', ')
+  const src = withBase(variants[variants.length - 1]?.webp ?? '')
+
+  return { src, srcset }
+}
+
+function makeItemsFromManifest(manifestData) {
+  return Object.entries(manifestData)
+    .filter(([, imageEntry]) => imageEntry?.kind === 'portfolio')
+    .map(([filename, imageEntry]) => {
+      const category = imageEntry?.category ?? defaultCategory
+      const { src, srcset } = buildResponsiveImageData(imageEntry)
+      const previewSrc = withBase((imageEntry?.variants ?? [])[Math.max((imageEntry?.variants ?? []).length - 2, 0)]?.webp ?? '')
+
+      return {
+        id: filename,
+        src,
+        previewSrc,
+        srcset,
+        category,
+        categoryLabel: getCategoryLabel(category)
+      }
+    })
+}
+
+function getHeroFromManifest(manifestData) {
+  const portfolioHeroEntry = manifestData['portfolio-hero.jpg']
+  const mainHeroEntry = manifestData['main-hero.jpg']
+  const heroEntry = portfolioHeroEntry ?? mainHeroEntry
+
+  if (heroEntry) {
+    const { src, srcset } = buildResponsiveImageData(heroEntry)
+
+    return {
+      src,
+      srcset,
+      sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
+      alt_pl: 'Przykładowa realizacja z portfolio'
+    }
+  }
+
+  return {
+    src: asset('assets/generated/og/portfolio.png'),
+    srcset: '',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
+    alt_pl: 'Portfolio realizacji'
+  }
+}
 
 export const frontmatter = {
   title: 'Portfolio — Rofamet',
   description: 'Wybrane realizacje: bramy, furtki i ogrodzenia stalowe — przykłady wykonawstwa i montażu.',
   og_image: asset('assets/generated/og/portfolio.png'),
-  hero: {
-    src: asset('assets/generated/photo-2026-06-12-16-01-41-1920.webp'),
-    srcset:
-      `${asset('assets/generated/photo-2026-06-12-16-01-41-320.webp')} 320w, ${asset('assets/generated/photo-2026-06-12-16-01-41-640.webp')} 640w, ${asset('assets/generated/photo-2026-06-12-16-01-41-1280.webp')} 1280w, ${asset('assets/generated/photo-2026-06-12-16-01-41-1920.webp')} 1920w`,
-    sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
-    alt_pl: 'Brama stalowa — przykład realizacji'
-  }
-}
-
-function makeItemsFromManifest(m) {
-  return Object.entries(m).map(([filename, variants]) => {
-    const srcset = variants.map(v => `${withBase(v.webp)} ${v.width}w`).join(', ')
-    const src = withBase(variants[variants.length - 1].webp)
-    const previewSrc = withBase(variants[Math.max(variants.length - 2, 0)].webp)
-    const title = filename.replace(/\.[^.]+$/, '').replace(/PHOTO-\d+-/,'').replace(/[-_]/g, ' ')
-    return { id: filename, title, src, previewSrc, srcset, variants }
-  })
+  hero: getHeroFromManifest(manifest)
 }
 
 export default function Portfolio() {
   const items = useMemo(() => makeItemsFromManifest(manifest), [])
+  const [activeCategory, setActiveCategory] = useState('all')
   const [activeIndex, setActiveIndex] = useState(null)
-  const activeItem = activeIndex === null ? null : items[activeIndex]
+  const filteredItems = useMemo(() => {
+    if (activeCategory === 'all') {
+      return items
+    }
+
+    return items.filter(item => item.category === activeCategory)
+  }, [activeCategory, items])
+  const activeItem = activeIndex === null ? null : filteredItems[activeIndex] ?? null
+
+  useEffect(() => {
+    setActiveIndex(null)
+  }, [activeCategory])
 
   useEffect(() => {
     if (activeIndex === null) return undefined
+    if (filteredItems.length === 0) {
+      setActiveIndex(null)
+      return undefined
+    }
+
+    if (activeIndex >= filteredItems.length) {
+      setActiveIndex(0)
+      return undefined
+    }
 
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -46,11 +103,11 @@ export default function Portfolio() {
       }
 
       if (event.key === 'ArrowRight') {
-        setActiveIndex(currentIndex => (currentIndex + 1) % items.length)
+        setActiveIndex(currentIndex => (currentIndex + 1) % filteredItems.length)
       }
 
       if (event.key === 'ArrowLeft') {
-        setActiveIndex(currentIndex => (currentIndex - 1 + items.length) % items.length)
+        setActiveIndex(currentIndex => (currentIndex - 1 + filteredItems.length) % filteredItems.length)
       }
     }
 
@@ -60,7 +117,7 @@ export default function Portfolio() {
       document.body.style.overflow = previousOverflow
       window.removeEventListener('keydown', onKeyDown)
     }
-  }, [activeIndex, items.length])
+  }, [activeIndex, filteredItems.length])
 
   function openLightbox(index) {
     setActiveIndex(index)
@@ -71,11 +128,11 @@ export default function Portfolio() {
   }
 
   function showPrevious() {
-    setActiveIndex(currentIndex => (currentIndex - 1 + items.length) % items.length)
+    setActiveIndex(currentIndex => (currentIndex - 1 + filteredItems.length) % filteredItems.length)
   }
 
   function showNext() {
-    setActiveIndex(currentIndex => (currentIndex + 1) % items.length)
+    setActiveIndex(currentIndex => (currentIndex + 1) % filteredItems.length)
   }
 
   return (
@@ -104,32 +161,46 @@ export default function Portfolio() {
               <p className="panel-kicker">Galeria</p>
               <h2 className="portfolio-title">Nasze realizacje</h2>
             </div>
-            <p className="portfolio-meta">Kwadratowe kadry, spokojne opisy i mocny nacisk na samą realizację. To odpowiada wybranemu przez Ciebie industrialnemu kierunkowi.</p>
+            <p className="portfolio-meta">Przeglądaj realizacje według kategorii i wybieraj te, które najlepiej odpowiadają Twoim potrzebom.</p>
           </div>
 
-          <div className="portfolio-grid">
-          {items.map((item, index) => (
-            <article key={item.id} className="card group">
+          <div className="portfolio-filters" role="tablist" aria-label="Filtry realizacji">
+            {filterOptions.map(option => (
               <button
+                key={option.key}
                 type="button"
-                className="card-trigger"
-                onClick={() => openLightbox(index)}
-                aria-label={`Otwórz zdjęcie: ${item.title}`}
+                className={`portfolio-filter${activeCategory === option.key ? ' is-active' : ''}`}
+                onClick={() => setActiveCategory(option.key)}
+                aria-pressed={activeCategory === option.key}
               >
-                <div className="card-media">
-                  <picture>
-                    <source type="image/webp" srcSet={item.srcset} sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw" />
-                    <img src={item.previewSrc} alt={item.title} loading="lazy" decoding="async" />
-                  </picture>
-                </div>
-                <div className="card-body">
-                  <h3 className="card-title">{item.title}</h3>
-                  <p className="card-copy">Krótki opis projektu — stalowa konstrukcja i montaż. Kliknij, aby otworzyć większy widok.</p>
-                </div>
+                {option.label}
               </button>
-            </article>
-          ))}
+            ))}
           </div>
+
+          {filteredItems.length > 0 ? (
+            <div className="portfolio-grid">
+              {filteredItems.map((item, index) => (
+                <article key={item.id} className="card group">
+                  <button
+                    type="button"
+                    className="card-trigger"
+                    onClick={() => openLightbox(index)}
+                    aria-label={`Otwórz zdjęcie: ${item.title}`}
+                  >
+                    <div className="card-media">
+                      <picture>
+                        <source type="image/webp" srcSet={item.srcset} sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw" />
+                        <img src={item.previewSrc} alt={item.title} loading="lazy" decoding="async" />
+                      </picture>
+                    </div>
+                  </button>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="portfolio-empty">Brak realizacji w tej kategorii.</div>
+          )}
         </div>
       </section>
 
@@ -143,7 +214,7 @@ export default function Portfolio() {
         >
           <div className="lightbox-shell" onClick={event => event.stopPropagation()}>
             <div className="lightbox-toolbar">
-              <p className="lightbox-counter">{String(activeIndex + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}</p>
+              <p className="lightbox-counter">{String(activeIndex + 1).padStart(2, '0')} / {String(filteredItems.length).padStart(2, '0')}</p>
               <button type="button" className="lightbox-close" onClick={closeLightbox} aria-label="Zamknij galerię">Zamknij</button>
             </div>
 
@@ -157,10 +228,6 @@ export default function Portfolio() {
                   <source type="image/webp" srcSet={activeItem.srcset} sizes="100vw" />
                   <img className="lightbox-image" src={activeItem.src} alt={activeItem.title} decoding="async" />
                 </picture>
-                <figcaption className="lightbox-caption">
-                  <strong>{activeItem.title}</strong>
-                  <span>Użyj strzałek na klawiaturze lub przycisków, aby przełączać zdjęcia.</span>
-                </figcaption>
               </figure>
 
               <button type="button" className="lightbox-nav lightbox-nav-next" onClick={showNext} aria-label="Następne zdjęcie">

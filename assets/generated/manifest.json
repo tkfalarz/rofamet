@@ -1,560 +1,684 @@
 {
-  "PHOTO-2026-06-12-16-01-35.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-35-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-35-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-35-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-35-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-40 2.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-40-2-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-40-2-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-40-2-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-40-2-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-40.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-40-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-40-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-40-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-40-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-41 2.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-2-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-2-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-2-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-2-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-41 3.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-3-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-3-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-3-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-3-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-41.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-41-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-42 2.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-2-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-2-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-2-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-2-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-42 3.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-3-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-3-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-3-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-3-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-42.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-42-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 10.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-10-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-10-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-10-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-10-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 11.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-11-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-11-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-11-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-11-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 2.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-2-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-2-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-2-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-2-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 3.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-3-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-3-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-3-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-3-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 4.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-4-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-4-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-4-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-4-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 5.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-5-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-5-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-5-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-5-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 6.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-6-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-6-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-6-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-6-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 7.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-7-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-7-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-7-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-7-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 8.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-8-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-8-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-8-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-8-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43 9.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-9-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-9-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-9-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-9-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-43.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-43-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-44 2.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-44-2-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-44-2-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-44-2-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-44-2-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-01-44.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-01-44-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-01-44-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-01-44-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-01-44-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-20.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-20-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-20-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-20-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-20-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-21.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-21-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-21-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-21-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-21-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-22 2.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-2-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-2-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-2-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-2-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-22 3.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-3-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-3-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-3-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-3-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-22 4.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-4-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-4-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-4-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-4-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-22 5.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-5-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-5-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-5-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-5-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-22 6.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-6-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-6-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-6-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-6-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-22 7.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-7-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-7-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-7-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-7-1920.webp"
-    }
-  ],
-  "PHOTO-2026-06-12-16-02-22.jpg": [
-    {
-      "width": 320,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-320.webp"
-    },
-    {
-      "width": 640,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-640.webp"
-    },
-    {
-      "width": 1280,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-1280.webp"
-    },
-    {
-      "width": 1920,
-      "webp": "assets/generated/photo-2026-06-12-16-02-22-1920.webp"
-    }
-  ]
+  "main-hero.jpg": {
+    "kind": "hero",
+    "category": null,
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/main-hero-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/main-hero-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/main-hero-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/main-hero-1920.webp"
+      }
+    ]
+  },
+  "portfolio/architektura-ogrodowa/PHOTO-2026-06-12-16-02-22 6.jpg": {
+    "kind": "portfolio",
+    "category": "architektura-ogrodowa",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-architektura-ogrodowa/photo-2026-06-12-16-02-22-6-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-architektura-ogrodowa/photo-2026-06-12-16-02-22-6-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-architektura-ogrodowa/photo-2026-06-12-16-02-22-6-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-architektura-ogrodowa/photo-2026-06-12-16-02-22-6-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balkony-francuskie/PHOTO-2026-06-12-16-01-43 11.jpg": {
+    "kind": "portfolio",
+    "category": "balkony-francuskie",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balkony-francuskie/photo-2026-06-12-16-01-43-11-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balkony-francuskie/photo-2026-06-12-16-01-43-11-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balkony-francuskie/photo-2026-06-12-16-01-43-11-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balkony-francuskie/photo-2026-06-12-16-01-43-11-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balustrady-barierki-porecze/PHOTO-2026-06-12-16-01-40 2.jpg": {
+    "kind": "portfolio",
+    "category": "balustrady-barierki-porecze",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-40-2-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-40-2-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-40-2-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-40-2-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balustrady-barierki-porecze/PHOTO-2026-06-12-16-01-41 2.jpg": {
+    "kind": "portfolio",
+    "category": "balustrady-barierki-porecze",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-41-2-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-41-2-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-41-2-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-41-2-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balustrady-barierki-porecze/PHOTO-2026-06-12-16-01-41.jpg": {
+    "kind": "portfolio",
+    "category": "balustrady-barierki-porecze",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-41-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-41-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-41-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-41-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balustrady-barierki-porecze/PHOTO-2026-06-12-16-01-42 2.jpg": {
+    "kind": "portfolio",
+    "category": "balustrady-barierki-porecze",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-2-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-2-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-2-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-2-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balustrady-barierki-porecze/PHOTO-2026-06-12-16-01-42 3.jpg": {
+    "kind": "portfolio",
+    "category": "balustrady-barierki-porecze",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-3-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-3-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-3-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-3-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balustrady-barierki-porecze/PHOTO-2026-06-12-16-01-42.jpg": {
+    "kind": "portfolio",
+    "category": "balustrady-barierki-porecze",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-42-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balustrady-barierki-porecze/PHOTO-2026-06-12-16-01-43 6.jpg": {
+    "kind": "portfolio",
+    "category": "balustrady-barierki-porecze",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-43-6-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-43-6-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-43-6-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-43-6-1920.webp"
+      }
+    ]
+  },
+  "portfolio/balustrady-barierki-porecze/PHOTO-2026-06-12-16-01-43 7.jpg": {
+    "kind": "portfolio",
+    "category": "balustrady-barierki-porecze",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-43-7-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-43-7-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-43-7-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-balustrady-barierki-porecze/photo-2026-06-12-16-01-43-7-1920.webp"
+      }
+    ]
+  },
+  "portfolio/bramy-ogrodzenia/PHOTO-2026-06-12-16-01-35.jpg": {
+    "kind": "portfolio",
+    "category": "bramy-ogrodzenia",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-01-35-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-01-35-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-01-35-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-01-35-1920.webp"
+      }
+    ]
+  },
+  "portfolio/bramy-ogrodzenia/PHOTO-2026-06-12-16-01-40.jpg": {
+    "kind": "portfolio",
+    "category": "bramy-ogrodzenia",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-01-40-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-01-40-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-01-40-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-01-40-1920.webp"
+      }
+    ]
+  },
+  "portfolio/bramy-ogrodzenia/PHOTO-2026-06-12-16-02-22 4.jpg": {
+    "kind": "portfolio",
+    "category": "bramy-ogrodzenia",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-02-22-4-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-02-22-4-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-02-22-4-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-bramy-ogrodzenia/photo-2026-06-12-16-02-22-4-1920.webp"
+      }
+    ]
+  },
+  "portfolio/cnc/PHOTO-2026-06-12-16-02-20.jpg": {
+    "kind": "portfolio",
+    "category": "cnc",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-20-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-20-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-20-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-20-1920.webp"
+      }
+    ]
+  },
+  "portfolio/cnc/PHOTO-2026-06-12-16-02-21.jpg": {
+    "kind": "portfolio",
+    "category": "cnc",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-21-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-21-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-21-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-21-1920.webp"
+      }
+    ]
+  },
+  "portfolio/cnc/PHOTO-2026-06-12-16-02-22 2.jpg": {
+    "kind": "portfolio",
+    "category": "cnc",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-2-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-2-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-2-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-2-1920.webp"
+      }
+    ]
+  },
+  "portfolio/cnc/PHOTO-2026-06-12-16-02-22 3.jpg": {
+    "kind": "portfolio",
+    "category": "cnc",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-3-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-3-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-3-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-3-1920.webp"
+      }
+    ]
+  },
+  "portfolio/cnc/PHOTO-2026-06-12-16-02-22 5.jpg": {
+    "kind": "portfolio",
+    "category": "cnc",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-5-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-5-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-5-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-5-1920.webp"
+      }
+    ]
+  },
+  "portfolio/cnc/PHOTO-2026-06-12-16-02-22 7.jpg": {
+    "kind": "portfolio",
+    "category": "cnc",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-7-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-7-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-7-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-7-1920.webp"
+      }
+    ]
+  },
+  "portfolio/cnc/PHOTO-2026-06-12-16-02-22.jpg": {
+    "kind": "portfolio",
+    "category": "cnc",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-cnc/photo-2026-06-12-16-02-22-1920.webp"
+      }
+    ]
+  },
+  "portfolio/konstrukcje-stalowe/PHOTO-2026-06-12-16-01-43 2.jpg": {
+    "kind": "portfolio",
+    "category": "konstrukcje-stalowe",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-konstrukcje-stalowe/photo-2026-06-12-16-01-43-2-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-konstrukcje-stalowe/photo-2026-06-12-16-01-43-2-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-konstrukcje-stalowe/photo-2026-06-12-16-01-43-2-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-konstrukcje-stalowe/photo-2026-06-12-16-01-43-2-1920.webp"
+      }
+    ]
+  },
+  "portfolio/meble-loft/PHOTO-2026-06-12-16-01-41 3.jpg": {
+    "kind": "portfolio",
+    "category": "meble-loft",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-41-3-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-41-3-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-41-3-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-41-3-1920.webp"
+      }
+    ]
+  },
+  "portfolio/meble-loft/PHOTO-2026-06-12-16-01-43 3.jpg": {
+    "kind": "portfolio",
+    "category": "meble-loft",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-3-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-3-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-3-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-3-1920.webp"
+      }
+    ]
+  },
+  "portfolio/meble-loft/PHOTO-2026-06-12-16-01-43 4.jpg": {
+    "kind": "portfolio",
+    "category": "meble-loft",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-4-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-4-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-4-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-4-1920.webp"
+      }
+    ]
+  },
+  "portfolio/meble-loft/PHOTO-2026-06-12-16-01-43 5.jpg": {
+    "kind": "portfolio",
+    "category": "meble-loft",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-5-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-5-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-5-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-5-1920.webp"
+      }
+    ]
+  },
+  "portfolio/meble-loft/PHOTO-2026-06-12-16-01-43 8.jpg": {
+    "kind": "portfolio",
+    "category": "meble-loft",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-8-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-8-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-8-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-8-1920.webp"
+      }
+    ]
+  },
+  "portfolio/meble-loft/PHOTO-2026-06-12-16-01-43 9.jpg": {
+    "kind": "portfolio",
+    "category": "meble-loft",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-9-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-9-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-9-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-43-9-1920.webp"
+      }
+    ]
+  },
+  "portfolio/meble-loft/PHOTO-2026-06-12-16-01-44 2.jpg": {
+    "kind": "portfolio",
+    "category": "meble-loft",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-44-2-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-44-2-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-44-2-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-44-2-1920.webp"
+      }
+    ]
+  },
+  "portfolio/meble-loft/PHOTO-2026-06-12-16-01-44.jpg": {
+    "kind": "portfolio",
+    "category": "meble-loft",
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-44-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-44-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-44-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-meble-loft/photo-2026-06-12-16-01-44-1920.webp"
+      }
+    ]
+  },
+  "portfolio-hero.jpg": {
+    "kind": "hero",
+    "category": null,
+    "variants": [
+      {
+        "width": 320,
+        "webp": "assets/generated/portfolio-hero-320.webp"
+      },
+      {
+        "width": 640,
+        "webp": "assets/generated/portfolio-hero-640.webp"
+      },
+      {
+        "width": 1280,
+        "webp": "assets/generated/portfolio-hero-1280.webp"
+      },
+      {
+        "width": 1920,
+        "webp": "assets/generated/portfolio-hero-1920.webp"
+      }
+    ]
+  }
 }
