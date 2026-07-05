@@ -29,7 +29,7 @@ const homeHero = mainHeroEntry
 
 export const frontmatter = {
   title: 'Rofamet — Strona główna',
-  description: 'Rofamet — konstrukcje stalowe, bramy i ogrodzenia. Projekt, produkcja oraz montaż — realizacje dla klientów indywidualnych i firm.',
+  description: 'Projektuję i wykonuję konstrukcje stalowe, bramy oraz ogrodzenia. Tworzę realizacje dla domów, firm i inwestycji z naciskiem na trwałość i estetykę.',
   og_image: asset('assets/generated/og/home.png'),
   hero: homeHero
 }
@@ -58,8 +58,8 @@ export default function Home({ highlightContact = false }) {
             <h1 className="hero-title">Stalowe realizacje, które porządkują przestrzeń.</h1>
             <p className="hero-description">{frontmatter.description}</p>
             <div className="hero-actions">
-              <a href="#/portfolio" className="btn-primary">Zobacz realizacje</a>
-              <a href="mailto:rofamet@op.pl" className="btn-secondary">Napisz do nas</a>
+              <a href="#/portfolio" className="btn-primary">Zobacz moje realizacje</a>
+              <a href="mailto:rofamet@op.pl" className="btn-secondary">Napisz do mnie</a>
             </div>
           </div>
         </div>
@@ -69,15 +69,15 @@ export default function Home({ highlightContact = false }) {
         <div className="site-container section-grid">
           <article className="panel">
             <p className="panel-kicker">Portfolio</p>
-            <h2 className="panel-title">Realizacje dopasowane do domu, firmy i inwestycji.</h2>
-            <p className="panel-body">Zobacz wybrane bramy, ogrodzenia i stalowe konstrukcje przygotowane z naciskiem na trwałość, detal i sprawny montaż.</p>
+            <h2 className="panel-title">Realizacje dopasowane do Twojego domu, firmy i inwestycji.</h2>
+            <p className="panel-body">Zobacz wybrane bramy, ogrodzenia i stalowe konstrukcje przygotowane przeze mnie z naciskiem na trwałość, detal i sprawny montaż.</p>
             <a href="#/portfolio" className="panel-link">Przejdź do portfolio</a>
           </article>
 
           <article className="panel">
             <p className="panel-kicker">Zakres prac</p>
             <h2 className="panel-title">Od projektu po gotowy montaż.</h2>
-            <p className="panel-body">Projektowanie, produkcja, malowanie proszkowe i montaż prowadzimy jako jeden proces, dzięki czemu realizacja jest spójna i przewidywalna.</p>
+            <p className="panel-body">Projektowanie, produkcję, malowanie proszkowe i montaż prowadzę jako jeden proces, dzięki czemu realizacja jest spójna i przewidywalna.</p>
           </article>
 
           <article id="contact-tile" className={`panel contact-panel ${highlightContact ? 'contact-panel-highlight' : ''}`}>

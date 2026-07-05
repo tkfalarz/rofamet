@@ -59,7 +59,7 @@ function getHeroFromManifest(manifestData) {
 
 export const frontmatter = {
   title: 'Portfolio — Rofamet',
-  description: 'Wybrane realizacje: bramy, furtki i ogrodzenia stalowe — przykłady wykonawstwa i montażu.',
+  description: 'Przegląd moich realizacji: bram, furtki i ogrodzeń stalowych — przykłady projektowania, produkcji i montażu.',
   og_image: asset('assets/generated/og/portfolio.png'),
   hero: getHeroFromManifest(manifest)
 }
@@ -148,8 +148,8 @@ export default function Portfolio() {
         <div className="page-hero-inner">
           <div className="page-hero-copy">
             <p className="eyebrow">Wybrane realizacje</p>
-            <h1 className="page-hero-title">Portfolio stalowych konstrukcji i bram.</h1>
-            <p className="page-hero-text">Przegląd przykładowych montaży i wykonawstwa. Układ pozostaje prosty, zdjęcia są na pierwszym planie, a siatka jest równa i czytelna.</p>
+            <h1 className="page-hero-title">Moje realizacje stalowych konstrukcji i bram.</h1>
+            <p className="page-hero-text">Przegląd moich przykładowych montaży i wykonawstwa. Układ pozostaje prosty, zdjęcia są na pierwszym planie, a siatka jest równa i czytelna.</p>
           </div>
         </div>
       </section>
@@ -159,7 +159,7 @@ export default function Portfolio() {
           <div className="portfolio-header">
             <div>
               <p className="panel-kicker">Galeria</p>
-              <h2 className="portfolio-title">Nasze realizacje</h2>
+              <h2 className="portfolio-title">Moje realizacje</h2>
             </div>
             <p className="portfolio-meta">Przeglądaj realizacje według kategorii i wybieraj te, które najlepiej odpowiadają Twoim potrzebom.</p>
           </div>
