@@ -16,6 +16,29 @@ export default function App(){
   const [route, setRoute] = useState(initialRoute)
   const [frontmatter, setFrontmatter] = useState({})
   const [isHeaderTransparent, setIsHeaderTransparent] = useState(false)
+  const [highlightContact, setHighlightContact] = useState(false)
+  const [pendingContactScroll, setPendingContactScroll] = useState(false)
+
+  function scrollToContact() {
+    const contactTile = document.getElementById('contact-tile')
+    if (!contactTile) return
+
+    contactTile.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    setHighlightContact(true)
+    window.setTimeout(() => setHighlightContact(false), 1800)
+  }
+
+  function handleContactClick(event) {
+    event.preventDefault()
+
+    if (route === '/') {
+      scrollToContact()
+      return
+    }
+
+    setPendingContactScroll(true)
+    window.location.hash = '/'
+  }
 
   // update frontmatter when route changes
   useEffect(() => {
@@ -46,6 +69,13 @@ export default function App(){
     return () => window.removeEventListener('scroll', updateHeader)
   }, [route])
 
+  useEffect(() => {
+    if (pendingContactScroll && route === '/') {
+      scrollToContact()
+      setPendingContactScroll(false)
+    }
+  }, [pendingContactScroll, route])
+
   return (
     <main className="site-shell">
       <Head frontmatter={frontmatter} />
@@ -64,13 +94,13 @@ export default function App(){
           <nav className="site-nav" aria-label="Główna nawigacja">
             <a href="#/">Start</a>
             <a href="#/portfolio">Realizacje</a>
-            <a className="nav-cta" href="mailto:rofamet@op.pl">Kontakt</a>
+            <a className="nav-cta" href="#/" onClick={handleContactClick}>Kontakt</a>
           </nav>
         </div>
       </header>
 
       {route === '/' ? (
-        <Home />
+        <Home highlightContact={highlightContact} />
       ) : route === '/portfolio' ? (
         <Portfolio />
       ) : (

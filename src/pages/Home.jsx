@@ -34,7 +34,7 @@ export const frontmatter = {
   hero: homeHero
 }
 
-export default function Home() {
+export default function Home({ highlightContact = false }) {
   return (
     <>
       <section className="hero-frame">
@@ -80,7 +80,7 @@ export default function Home() {
             <p className="panel-body">Projektowanie, produkcja, malowanie proszkowe i montaż prowadzimy jako jeden proces, dzięki czemu realizacja jest spójna i przewidywalna.</p>
           </article>
 
-          <article className="panel">
+          <article id="contact-tile" className={`panel contact-panel ${highlightContact ? 'contact-panel-highlight' : ''}`}>
             <p className="panel-kicker">Kontakt</p>
             <h2 className="panel-title">Porozmawiajmy o Twojej realizacji.</h2>
             <p className="panel-body">Telefon: <strong>+48 513 642 695</strong><br />E-mail: <a href="mailto:rofamet@op.pl" className="panel-link">rofamet@op.pl</a></p>
