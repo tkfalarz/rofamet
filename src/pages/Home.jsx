@@ -89,16 +89,14 @@ export default function Home({ highlightContact = false }) {
             </p>
           </article>
 
-          <article className="panel">
-            <p className="panel-kicker">Obsługuję teren</p>
-            <h2 className="panel-title">Projekty i montaż w okolicach Biecza.</h2>
-            <p className="panel-body">Realizuję prace dla klientów w Bieczu i okolicznych obszarach. Posiadam doświadczenie w pracach terenowych i komunikacji z lokalnymi partnerami.</p>
-          </article>
-
           <article id="contact-tile" className={`panel contact-panel ${highlightContact ? 'contact-panel-highlight' : ''}`}>
             <p className="panel-kicker">Kontakt</p>
             <h2 className="panel-title">Porozmawiajmy o Twojej realizacji.</h2>
-            <p className="panel-body">Telefon: <strong>+48 513 642 695</strong><br />E-mail: <a href="mailto:rofamet@op.pl" className="panel-link">rofamet@op.pl</a></p>
+            <p className="panel-body">
+            Lokalizacja: <strong>Biecz</strong><br />
+            Telefon: <strong>+48 513 642 695</strong><br />
+            E-mail: <a href="mailto:rofamet@op.pl" className="panel-link">rofamet@op.pl</a>
+            </p>
           </article>
         </div>
       </section>
