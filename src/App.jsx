@@ -11,7 +11,9 @@ function normalizePath(pathname = '/') {
 
 export default function App({ route = '/' }) {
   const normalizedRoute = normalizePath(route)
-  const [isHeaderTransparent, setIsHeaderTransparent] = useState(false)
+  const [isHeaderTransparent, setIsHeaderTransparent] = useState(
+    normalizedRoute === '/' || normalizedRoute === '/portfolio/'
+  )
 
   // header transparency when over hero (transparent) and solid after scroll
   useEffect(() => {
