@@ -28,7 +28,8 @@ function makeItemsFromManifest(manifestData) {
         previewSrc,
         srcset,
         category,
-        categoryLabel: getCategoryLabel(category)
+        categoryLabel: getCategoryLabel(category),
+        title: `Realizacja: ${getCategoryLabel(category)}`
       }
     })
 }
@@ -58,8 +59,6 @@ function getHeroFromManifest(manifestData) {
 }
 
 export const frontmatter = {
-  title: 'Portfolio — Rofamet',
-  og_image: asset('assets/generated/og/portfolio.png'),
   hero: getHeroFromManifest(manifest)
 }
 
@@ -79,6 +78,13 @@ export default function Portfolio() {
   useEffect(() => {
     setActiveIndex(null)
   }, [activeCategory])
+
+  useEffect(() => {
+    const selectedCategory = new URLSearchParams(window.location.search).get('kategoria')
+    if (selectedCategory && filterOptions.some(option => option.key === selectedCategory)) {
+      setActiveCategory(selectedCategory)
+    }
+  }, [])
 
   useEffect(() => {
     if (activeIndex === null) return undefined
@@ -126,6 +132,14 @@ export default function Portfolio() {
     setActiveIndex(null)
   }
 
+  function selectCategory(category) {
+    setActiveCategory(category)
+    const url = new URL(window.location.href)
+    if (category === 'all') url.searchParams.delete('kategoria')
+    else url.searchParams.set('kategoria', category)
+    window.history.replaceState({}, '', url)
+  }
+
   function showPrevious() {
     setActiveIndex(currentIndex => (currentIndex - 1 + filteredItems.length) % filteredItems.length)
   }
@@ -168,7 +182,7 @@ export default function Portfolio() {
                 key={option.key}
                 type="button"
                 className={`portfolio-filter${activeCategory === option.key ? ' is-active' : ''}`}
-                onClick={() => setActiveCategory(option.key)}
+                onClick={() => selectCategory(option.key)}
                 aria-pressed={activeCategory === option.key}
               >
                 {option.label}

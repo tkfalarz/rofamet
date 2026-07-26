@@ -28,9 +28,7 @@ const homeHero = mainHeroEntry
     }
 
 export const frontmatter = {
-  title: 'Rofamet — Strona główna',
-  description: 'Projektuję i wykonuję balkony francuskie, balustrady, poręcze, konstrukcje stalowe, wycinanki plazmą CNC i meble loft. Pełny zakres od projektu po montaż.',
-  og_image: asset('assets/generated/og/home.png'),
+  description: 'Wykonuję bramy, ogrodzenia, balustrady, balkony francuskie i konstrukcje stalowe. Montaż realizuję w Bieczu, Gorlicach i powiecie gorlickim.',
   hero: homeHero
 }
 
@@ -48,6 +46,8 @@ export default function Home({ highlightContact = false }) {
             <img
               src={frontmatter.hero.src}
               alt={frontmatter.hero.alt_pl}
+              fetchPriority="high"
+              loading="eager"
             />
           </picture>
         </div>
@@ -58,7 +58,7 @@ export default function Home({ highlightContact = false }) {
             <h1 className="hero-title">Stalowe realizacje, które porządkują przestrzeń.</h1>
             <p className="hero-description">{frontmatter.description}</p>
             <div className="hero-actions">
-              <a href="#/portfolio" className="btn-primary">Zobacz moje realizacje</a>
+              <a href="/portfolio/" className="btn-primary">Zobacz moje realizacje</a>
               <a href="mailto:rofamet@op.pl" className="btn-secondary">Napisz do mnie</a>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function Home({ highlightContact = false }) {
             <p className="panel-kicker">Portfolio</p>
             <h2 className="panel-title">Realizacje dopasowane do Twojego domu, firmy i inwestycji.</h2>
             <p className="panel-body">Zobacz wybrane bramy, ogrodzenia i stalowe konstrukcje przygotowane przeze mnie z naciskiem na trwałość, detal i sprawny montaż.</p>
-            <a href="#/portfolio" className="panel-link">Przejdź do portfolio</a>
+            <a href="/portfolio/" className="panel-link">Przejdź do portfolio</a>
           </article>
 
           <article className="panel">
@@ -83,7 +83,7 @@ export default function Home({ highlightContact = false }) {
                 <li>Balustrady, barierki, poręcze</li>
                 <li>Mała architektura ogrodowa</li>
                 <li>Konstrukcje stalowe</li>
-                <li>Cięcie blach plazmą CNC</li>
+                <li>Cięcie blach CNC</li>
                 <li>Meble loft</li>
               </ul>
             </p>
@@ -94,7 +94,7 @@ export default function Home({ highlightContact = false }) {
             <h2 className="panel-title">Porozmawiajmy o Twojej realizacji.</h2>
             <p className="panel-body">
             Lokalizacja: <strong>Biecz</strong><br />
-            Telefon: <strong>+48 513 642 695</strong><br />
+            Telefon: <strong><a href="tel:+48513642695">+48 513 642 695</a></strong><br />
             E-mail: <a href="mailto:rofamet@op.pl" className="panel-link">rofamet@op.pl</a>
             </p>
           </article>

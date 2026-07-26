@@ -6,7 +6,7 @@ export const categoryDefinitions = [
     label: "Balustrady, barierki, poręcze wewnętrzne i zewnętrzne",
   },
   { key: "bramy-ogrodzenia", label: "Bramy i ogrodzenia" },
-  { key: "cnc", label: "Cięcie CNC" },
+  { key: "cnc", label: "Cięcie blach CNC" },
   { key: "konstrukcje-stalowe", label: "Konstrukcje stalowe" },
   { key: "meble-loft", label: "Meble loft" },
 ];
