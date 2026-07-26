@@ -1,62 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import Head from './components/Head'
-import Home, { frontmatter as homeFrontmatter } from './pages/Home'
-import Portfolio, { frontmatter as portfolioFrontmatter } from './pages/Portfolio'
+import Home from './pages/Home'
+import Portfolio from './pages/Portfolio'
 import logoMark from '../assets/raw/favicon.svg'
 import './styles/globals.css'
 
-function normalizePath(hash) {
-  const raw = hash.startsWith('#') ? hash.slice(1) : hash
-  const path = raw || '/'
-  return path.replace(/\/\/+$/, '') || '/'
+function normalizePath(pathname = '/') {
+  if (pathname === '/portfolio' || pathname === '/portfolio/') return '/portfolio/'
+  return '/'
 }
 
-export default function App(){
-  const initialRoute = normalizePath(window.location.hash)
-  const [route, setRoute] = useState(initialRoute)
-  const [frontmatter, setFrontmatter] = useState({})
-  const [isHeaderTransparent, setIsHeaderTransparent] = useState(false)
-  const [highlightContact, setHighlightContact] = useState(false)
-  const [pendingContactScroll, setPendingContactScroll] = useState(false)
-
-  function scrollToContact() {
-    const contactTile = document.getElementById('contact-tile')
-    if (!contactTile) return
-
-    contactTile.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    setHighlightContact(true)
-    window.setTimeout(() => setHighlightContact(false), 1800)
-  }
-
-  function handleContactClick(event) {
-    event.preventDefault()
-
-    if (route === '/') {
-      scrollToContact()
-      return
-    }
-
-    setPendingContactScroll(true)
-    window.location.hash = '/'
-  }
-
-  // update frontmatter when route changes
-  useEffect(() => {
-    if (route === '/') setFrontmatter(homeFrontmatter || {})
-    else if (route === '/portfolio') setFrontmatter(portfolioFrontmatter || {})
-    else setFrontmatter({})
-  }, [route])
-
-  // handle browser hash changes for SPA navigation
-  useEffect(() => {
-    const onHashChange = () => setRoute(normalizePath(window.location.hash))
-    window.addEventListener('hashchange', onHashChange)
-    return () => window.removeEventListener('hashchange', onHashChange)
-  }, [])
+export default function App({ route = '/' }) {
+  const normalizedRoute = normalizePath(route)
+  const [isHeaderTransparent, setIsHeaderTransparent] = useState(
+    normalizedRoute === '/' || normalizedRoute === '/portfolio/'
+  )
 
   // header transparency when over hero (transparent) and solid after scroll
   useEffect(() => {
-    const hasHero = route === '/' || route === '/portfolio'
+    const hasHero = normalizedRoute === '/' || normalizedRoute === '/portfolio/'
     function updateHeader() {
       if (!hasHero) {
         setIsHeaderTransparent(false)
@@ -67,21 +28,13 @@ export default function App(){
     updateHeader()
     window.addEventListener('scroll', updateHeader)
     return () => window.removeEventListener('scroll', updateHeader)
-  }, [route])
-
-  useEffect(() => {
-    if (pendingContactScroll && route === '/') {
-      scrollToContact()
-      setPendingContactScroll(false)
-    }
-  }, [pendingContactScroll, route])
+  }, [normalizedRoute])
 
   return (
     <main className="site-shell">
-      <Head frontmatter={frontmatter} />
       <header className={`site-header ${isHeaderTransparent ? 'header-transparent' : 'header-solid'}`}>
         <div className="header-inner">
-          <a href="#/" className="brand-mark" aria-label="Rofamet - strona główna">
+          <a href="/" className="brand-mark" aria-label="Rofamet - strona główna">
             <span className="brand-badge" aria-hidden="true">
               <img className="brand-badge-image" src={logoMark} alt="" />
             </span>
@@ -92,16 +45,16 @@ export default function App(){
           </a>
 
           <nav className="site-nav" aria-label="Główna nawigacja">
-            <a href="#/">Start</a>
-            <a href="#/portfolio">Realizacje</a>
-            <a className="nav-cta" href="#/" onClick={handleContactClick}>Kontakt</a>
+            <a href="/">Start</a>
+            <a href="/portfolio/">Realizacje</a>
+            <a className="nav-cta" href="/#contact-tile">Kontakt</a>
           </nav>
         </div>
       </header>
 
-      {route === '/' ? (
-        <Home highlightContact={highlightContact} />
-      ) : route === '/portfolio' ? (
+      {normalizedRoute === '/' ? (
+        <Home />
+      ) : normalizedRoute === '/portfolio/' ? (
         <Portfolio />
       ) : (
         <section className="not-found">

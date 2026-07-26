@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rofamet.pl/sitemap.xml

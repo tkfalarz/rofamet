@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run copy:generated",
+    "build": "npm run images:generate && npm run generate:og && node scripts/prerender.js",
     "copy:generated": "node scripts/copy-generated.js",
     "images:generate": "node scripts/images-generate.js",
     "generate:og": "node scripts/generate-og.js",
