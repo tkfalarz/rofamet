@@ -1,3 +1,5 @@
+import { categoryDefinitions } from './gallery-categories.js'
+
 export const SITE_URL = 'https://rofamet.pl'
 
 const commonMetadata = {
@@ -16,7 +18,13 @@ export const pageMetadata = {
     description: 'Zobacz moje realizacje: bramy, ogrodzenia, balustrady, konstrukcje stalowe oraz cięcie blach CNC. Montuję lokalnie, a małe projekty CNC wysyłam kurierem.',
     ...commonMetadata,
     image: '/assets/generated/og/portfolio.png'
-  }
+  },
+  ...Object.fromEntries(categoryDefinitions.map(category => [category.path, {
+    title: category.title,
+    description: category.description,
+    ...commonMetadata,
+    image: '/assets/generated/og/portfolio.png'
+  }]))
 }
 
 export const localBusinessJsonLd = {

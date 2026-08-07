@@ -2,12 +2,13 @@ import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { build } from 'vite'
+import { categoryDefinitions } from '../src/lib/gallery-categories.js'
 import { buildHead, pageMetadata } from '../src/lib/seo.js'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const docsDir = path.join(projectRoot, 'docs')
 const ssrDir = path.join(projectRoot, 'dist-ssr')
-const routes = ['/', '/portfolio/']
+const routes = ['/', '/portfolio/', ...categoryDefinitions.map(category => category.path)]
 
 function buildDocument({ route, appHtml, assetManifest }) {
   const entry = Object.values(assetManifest).find(asset => asset.isEntry)

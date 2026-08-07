@@ -379,6 +379,20 @@ a:focus-visible {
 	line-height: 1.7;
 }
 
+.panel-list {
+	margin: 1rem 0 0;
+	padding-left: 1.2rem;
+	color: var(--color-secondary);
+	font-size: 1rem;
+	line-height: 1.7;
+	list-style: disc inside;
+}
+
+.panel-list a:hover,
+.panel-list a:focus-visible {
+	color: var(--color-accent);
+}
+
 .panel-link {
 	display: inline-flex;
 	align-items: center;
@@ -480,6 +494,15 @@ a:focus-visible {
 	margin-bottom: 1.5rem;
 }
 
+.category-intro {
+	margin: 0 0 2rem;
+}
+
+.category-intro .portfolio-meta {
+	max-width: none;
+	margin: 0.9rem 0 0;
+}
+
 .portfolio-filter {
 	border: 1px solid rgba(var(--color-border-rgb), 1);
 	border-radius: 999px;
@@ -497,6 +520,25 @@ a:focus-visible {
 	border-color: rgba(var(--color-accent-rgb), 0.4);
 	color: var(--color-primary);
 	transform: translateY(-1px);
+}
+
+.portfolio-cta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+.portfolio-cta-email {
+	border-color: var(--color-border);
+	background: var(--color-surface);
+	color: var(--color-text);
+}
+
+.portfolio-cta-email:hover,
+.portfolio-cta-email:focus-visible {
+	background: var(--color-muted);
 }
 
 .portfolio-filter.is-active {

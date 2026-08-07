@@ -10,9 +10,10 @@ const WIDTHS = [320, 640, 1280, 1920]
 const CATEGORY_ALIASES = new Map([
   ['architektura-ogrodowa', 'architektura-ogrodowa'],
   ['balkony-francuskie', 'balkony-francuskie'],
-  ['balustrady-barierki-porecze', 'balustrady-barierki-porecze'],
-  ['balustrady', 'balustrady-barierki-porecze'],
-  ['bramy-ogrodzenia', 'bramy-ogrodzenia'],
+  ['balustrady', 'balustrady'],
+  ['barierki', 'barierki'],
+  ['bramy', 'bramy'],
+  ['ogrodzenia', 'ogrodzenia'],
   ['cnc', 'cnc'],
   ['konstrukcje-stalowe', 'konstrukcje-stalowe'],
   ['meble-loft', 'meble-loft']
@@ -78,6 +79,7 @@ function buildOutputName(relativePath) {
 }
 
 async function build() {
+  await fsp.rm(OUT, { recursive: true, force: true })
   await fsp.mkdir(OUT, { recursive: true })
   const files = await walk(INPUT)
   const manifest = {}

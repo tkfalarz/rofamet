@@ -1,6 +1,7 @@
 import React from 'react'
 
 import manifest from '../../assets/generated/manifest.json'
+import { categoryDefinitions } from '../lib/gallery-categories'
 import { withBase } from '../lib/site-paths'
 
 const asset = value => withBase(value)
@@ -31,6 +32,22 @@ export const frontmatter = {
   description: 'Wykonuję bramy, ogrodzenia, balustrady, balkony francuskie i konstrukcje stalowe. Montaż realizuję w Bieczu, Gorlicach i powiecie gorlickim.',
   hero: homeHero
 }
+
+const homeCategoryKeys = [
+  'balkony-francuskie',
+  'balustrady',
+  'barierki',
+  'architektura-ogrodowa',
+  'bramy',
+  'ogrodzenia',
+  'konstrukcje-stalowe',
+  'cnc',
+  'meble-loft'
+]
+
+const homeCategories = homeCategoryKeys
+  .map(key => categoryDefinitions.find(category => category.key === key))
+  .filter(Boolean)
 
 export default function Home({ highlightContact = false }) {
   return (
@@ -76,17 +93,12 @@ export default function Home({ highlightContact = false }) {
 
           <article className="panel">
             <p className="panel-kicker">Zakres prac</p>
-            <h2 className="panel-title">Obszary mojej specializacji</h2>
-            <p className="panel-body">
-              <ul style={{marginTop: '0.5rem', paddingLeft: '1.2rem', listStyle: 'disc', listStylePosition: 'inside'}}>
-                <li>Balkony francuskie</li>
-                <li>Balustrady, barierki, poręcze</li>
-                <li>Mała architektura ogrodowa</li>
-                <li>Konstrukcje stalowe</li>
-                <li>Cięcie blach CNC</li>
-                <li>Meble loft</li>
-              </ul>
-            </p>
+            <h2 className="panel-title">Obszary mojej specjalizacji</h2>
+            <ul className="panel-list">
+              {homeCategories.map(category => (
+                <li key={category.key}><a href={category.path}>{category.label}</a></li>
+              ))}
+            </ul>
           </article>
 
           <article id="contact-tile" className={`panel contact-panel ${highlightContact ? 'contact-panel-highlight' : ''}`}>

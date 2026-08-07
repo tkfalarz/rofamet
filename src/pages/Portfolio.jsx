@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 
 import manifest from '../../assets/generated/manifest.json'
-import { defaultCategory, filterOptions, getCategoryLabel } from '../lib/gallery-categories'
+import { categoryDefinitions, defaultCategory, getCategoryLabel } from '../lib/gallery-categories'
 import { withBase } from '../lib/site-paths'
 
 const asset = value => withBase(value)
@@ -62,29 +62,14 @@ export const frontmatter = {
   hero: getHeroFromManifest(manifest)
 }
 
-export default function Portfolio() {
+export default function Portfolio({ category = null }) {
   const items = useMemo(() => makeItemsFromManifest(manifest), [])
-  const [activeCategory, setActiveCategory] = useState('all')
   const [activeIndex, setActiveIndex] = useState(null)
-  const filteredItems = useMemo(() => {
-    if (activeCategory === 'all') {
-      return items
-    }
-
-    return items.filter(item => item.category === activeCategory)
-  }, [activeCategory, items])
+  const filteredItems = useMemo(
+    () => category ? items.filter(item => item.category === category.key) : items,
+    [category, items]
+  )
   const activeItem = activeIndex === null ? null : filteredItems[activeIndex] ?? null
-
-  useEffect(() => {
-    setActiveIndex(null)
-  }, [activeCategory])
-
-  useEffect(() => {
-    const selectedCategory = new URLSearchParams(window.location.search).get('kategoria')
-    if (selectedCategory && filterOptions.some(option => option.key === selectedCategory)) {
-      setActiveCategory(selectedCategory)
-    }
-  }, [])
 
   useEffect(() => {
     if (activeIndex === null) return undefined
@@ -132,14 +117,6 @@ export default function Portfolio() {
     setActiveIndex(null)
   }
 
-  function selectCategory(category) {
-    setActiveCategory(category)
-    const url = new URL(window.location.href)
-    if (category === 'all') url.searchParams.delete('kategoria')
-    else url.searchParams.set('kategoria', category)
-    window.history.replaceState({}, '', url)
-  }
-
   function showPrevious() {
     setActiveIndex(currentIndex => (currentIndex - 1 + filteredItems.length) % filteredItems.length)
   }
@@ -161,33 +138,42 @@ export default function Portfolio() {
         <div className="page-hero-inner">
           <div className="page-hero-copy">
             <p className="eyebrow">Galeria moich prac</p>
-            <h1 className="page-hero-title">Realizacje dopasowane do&nbsp;Twoich&nbsp;wizji</h1>
+            {category ? (
+              <p className="page-hero-title">Realizacje dopasowane do&nbsp;Twoich&nbsp;wizji</p>
+            ) : (
+              <h1 className="page-hero-title">Realizacje dopasowane do&nbsp;Twoich&nbsp;wizji</h1>
+            )}
           </div>
         </div>
       </section>
 
       <section className="portfolio-wrap">
         <div className="site-container">
-          <div className="portfolio-header">
-            <div>
-              <p className="panel-kicker">Galeria</p>
-              <h2 className="portfolio-title">Moje realizacje</h2>
-            </div>
-            <p className="portfolio-meta">Przeglądaj realizacje według kategorii i wybieraj te, które najlepiej odpowiadają Twoim potrzebom.</p>
-          </div>
-
-          <div className="portfolio-filters" role="tablist" aria-label="Filtry realizacji">
-            {filterOptions.map(option => (
-              <button
+          <nav className="portfolio-filters" aria-label="Kategorie realizacji">
+            <a className={`portfolio-filter${category ? '' : ' is-active'}`} href="/portfolio/" aria-current={category ? undefined : 'page'}>
+              Wszystkie
+            </a>
+            {categoryDefinitions.map(option => (
+              <a
                 key={option.key}
-                type="button"
-                className={`portfolio-filter${activeCategory === option.key ? ' is-active' : ''}`}
-                onClick={() => selectCategory(option.key)}
-                aria-pressed={activeCategory === option.key}
+                className={`portfolio-filter${category?.key === option.key ? ' is-active' : ''}`}
+                href={option.path}
+                aria-current={category?.key === option.key ? 'page' : undefined}
               >
                 {option.label}
-              </button>
+              </a>
             ))}
+          </nav>
+
+          <div className="category-intro">
+            {category ? (
+              <>
+              <h1 className="portfolio-title">{category.label}</h1>
+              <p className="portfolio-meta">{category.content}</p>
+              </>
+            ) : (
+              <h2 className="portfolio-title">Wszystkie realizacje</h2>
+            )}
           </div>
 
           {filteredItems.length > 0 ? (
@@ -213,6 +199,13 @@ export default function Portfolio() {
           ) : (
             <div className="portfolio-empty">Brak realizacji w tej kategorii.</div>
           )}
+
+          {category ? (
+            <div className="portfolio-cta">
+              <a href="tel:+48513642695" className="btn-primary">Zadzwoń: +48 513 642 695</a>
+              <a href="mailto:rofamet@op.pl" className="btn-secondary portfolio-cta-email">Napisz e-mail</a>
+            </div>
+          ) : null}
         </div>
       </section>
 

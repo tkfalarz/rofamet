@@ -2,22 +2,24 @@ import React, { useEffect, useState } from 'react'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
 import logoMark from '../assets/raw/favicon.svg'
+import { getCategoryByPath } from './lib/gallery-categories'
 import './styles/globals.css'
 
 function normalizePath(pathname = '/') {
-  if (pathname === '/portfolio' || pathname === '/portfolio/') return '/portfolio/'
-  return '/'
+  if (pathname === '/') return '/'
+  return pathname.endsWith('/') ? pathname : `${pathname}/`
 }
 
 export default function App({ route = '/' }) {
   const normalizedRoute = normalizePath(route)
+  const category = getCategoryByPath(normalizedRoute)
   const [isHeaderTransparent, setIsHeaderTransparent] = useState(
-    normalizedRoute === '/' || normalizedRoute === '/portfolio/'
+    normalizedRoute === '/' || normalizedRoute === '/portfolio/' || category !== null
   )
 
   // header transparency when over hero (transparent) and solid after scroll
   useEffect(() => {
-    const hasHero = normalizedRoute === '/' || normalizedRoute === '/portfolio/'
+    const hasHero = normalizedRoute === '/' || normalizedRoute === '/portfolio/' || category !== null
     function updateHeader() {
       if (!hasHero) {
         setIsHeaderTransparent(false)
@@ -28,7 +30,7 @@ export default function App({ route = '/' }) {
     updateHeader()
     window.addEventListener('scroll', updateHeader)
     return () => window.removeEventListener('scroll', updateHeader)
-  }, [normalizedRoute])
+  }, [category, normalizedRoute])
 
   return (
     <main className="site-shell">
@@ -54,8 +56,8 @@ export default function App({ route = '/' }) {
 
       {normalizedRoute === '/' ? (
         <Home />
-      ) : normalizedRoute === '/portfolio/' ? (
-        <Portfolio />
+      ) : normalizedRoute === '/portfolio/' || category ? (
+        <Portfolio category={category} />
       ) : (
         <section className="not-found">
           <p className="panel-kicker">404</p>

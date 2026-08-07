@@ -51,7 +51,7 @@ HTML/SEO/Accessibility requirements
 LocalBusiness JSON-LD values (exact)
 - name: "Rofamet"
 - telephone: "+48 513 642 695"
-- email: "robertos242@onet.pl"
+- email: "rofamet@op.pl"
 - address: "Korczyna 286, 38-340 Biecz, PL"
 - url: "https://rofamet.pl"
 
