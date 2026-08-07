@@ -200,12 +200,10 @@ export default function Portfolio({ category = null }) {
             <div className="portfolio-empty">Brak realizacji w tej kategorii.</div>
           )}
 
-          {category ? (
-            <div className="portfolio-cta">
-              <a href="tel:+48513642695" className="btn-primary">Zadzwoń: +48 513 642 695</a>
-              <a href="mailto:rofamet@op.pl" className="btn-secondary portfolio-cta-email">Napisz e-mail</a>
-            </div>
-          ) : null}
+          <div className="portfolio-cta">
+            <a href="tel:+48513642695" className="btn-primary">Telefon / WhatsApp: +48 513 642 695</a>
+            <a href="mailto:rofamet@op.pl" className="btn-secondary portfolio-cta-email">Napisz e-mail</a>
+          </div>
         </div>
       </section>
 

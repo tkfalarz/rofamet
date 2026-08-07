@@ -106,7 +106,7 @@ export default function Home({ highlightContact = false }) {
             <h2 className="panel-title">Porozmawiajmy o Twojej realizacji.</h2>
             <p className="panel-body">
             Lokalizacja: <strong>Biecz</strong><br />
-            Telefon: <strong><a href="tel:+48513642695">+48 513 642 695</a></strong><br />
+            Telefon / WhatsApp: <strong><a href="tel:+48513642695">+48 513 642 695</a></strong><br />
             E-mail: <a href="mailto:rofamet@op.pl" className="panel-link">rofamet@op.pl</a>
             </p>
           </article>
