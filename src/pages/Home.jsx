@@ -29,7 +29,7 @@ const homeHero = mainHeroEntry
     }
 
 export const frontmatter = {
-  description: 'Wykonuję bramy, ogrodzenia, balustrady, balkony francuskie i konstrukcje stalowe. Montaż realizuję w Bieczu, Gorlicach i powiecie gorlickim.',
+  description: 'Wykonuję bramy, ogrodzenia, balustrady, balkony francuskie i konstrukcje stalowe. Montaż realizuję w Bieczu, Gorlicach, Jaśle i okolicy.',
   hero: homeHero
 }
 
