@@ -36,7 +36,9 @@ export const localBusinessJsonLd = {
   email: 'rofamet@op.pl',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Korczyna',
+    streetAddress: 'Korczyna 286',
+    postalCode: '38-340',
+    addressLocality: 'Biecz',
     addressCountry: 'PL'
   },
   areaServed: [
