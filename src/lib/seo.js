@@ -10,12 +10,12 @@ const commonMetadata = {
 export const pageMetadata = {
   '/': {
     title: 'Bramy, ogrodzenia, balustrady | Rofamet - Biecz, Gorlice, Jasło',
-    description: 'Wykonuję bramy, ogrodzenia, balustrady, balkony francuskie i konstrukcje stalowe. Montaż realizuję w Bieczu, Gorlicach, Jaśle i okolicy.',
+    description: 'Wykonujemy bramy, ogrodzenia, balustrady, balkony francuskie i konstrukcje stalowe. Lokalny montaż oraz wysyłka gotowych elementów.',
     ...commonMetadata
   },
   '/portfolio/': {
     title: 'Portfolio realizacji stalowych | Rofamet - Biecz, Gorlice, Jasło',
-    description: 'Zobacz realizacje: bramy, ogrodzenia, balustrady, konstrukcje stalowe i cięcie blach CNC. Montaż realizuję w Bieczu, Gorlicach oraz Jaśle.',
+    description: 'Zobacz realizacje: bramy, ogrodzenia, balustrady, konstrukcje stalowe i cięcie blach CNC. Lokalny montaż oraz wysyłka gotowych elementów.',
     ...commonMetadata,
     image: '/assets/generated/og/portfolio.png'
   },

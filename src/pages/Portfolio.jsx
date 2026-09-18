@@ -137,7 +137,7 @@ export default function Portfolio({ category = null }) {
 
         <div className="page-hero-inner">
           <div className="page-hero-copy">
-            <p className="eyebrow">Galeria moich prac</p>
+            <p className="eyebrow">Galeria naszych prac</p>
             {category ? (
               <p className="page-hero-title">Realizacje dopasowane do&nbsp;Twoich&nbsp;wizji</p>
             ) : (

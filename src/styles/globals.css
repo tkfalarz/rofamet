@@ -337,7 +337,24 @@ a:focus-visible {
 }
 
 .contact-panel {
+	display: flex;
+	flex-direction: column;
 	scroll-margin-top: 6rem;
+}
+
+.portfolio-panel {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-map-link {
+	align-self: center;
+	margin-top: auto;
+}
+
+.portfolio-link {
+	align-self: center;
+	margin-top: auto;
 }
 
 .contact-panel-highlight {
@@ -767,6 +784,12 @@ a:focus-visible {
 
 	.panel {
 		grid-column: auto;
+		min-height: auto;
+	}
+
+	.contact-map-link,
+	.portfolio-link {
+		margin-top: 1.5rem;
 	}
 
 	.portfolio-header {

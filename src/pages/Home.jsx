@@ -29,7 +29,7 @@ const homeHero = mainHeroEntry
     }
 
 export const frontmatter = {
-  description: 'Wykonuję bramy, ogrodzenia, balustrady, balkony francuskie i konstrukcje stalowe. Montaż realizuję w Bieczu, Gorlicach, Jaśle i okolicy.',
+  description: 'Wykonujemy bramy, ogrodzenia, balustrady, balkony francuskie i konstrukcje stalowe. Montaż realizujemy w Bieczu, Gorlicach, Jaśle i okolicy, a gotowe elementy oferujemy również z wysyłką.',
   hero: homeHero
 }
 
@@ -75,8 +75,8 @@ export default function Home({ highlightContact = false }) {
             <h1 className="hero-title">Stalowe realizacje, które porządkują przestrzeń.</h1>
             <p className="hero-description">{frontmatter.description}</p>
             <div className="hero-actions">
-              <a href="/portfolio/" className="btn-primary">Zobacz moje realizacje</a>
-              <a href="mailto:rofamet@op.pl" className="btn-secondary">Napisz do mnie</a>
+              <a href="/portfolio/" className="btn-primary">Zobacz nasze realizacje</a>
+              <a href="mailto:rofamet@op.pl" className="btn-secondary">Napisz do nas</a>
             </div>
           </div>
         </div>
@@ -84,16 +84,16 @@ export default function Home({ highlightContact = false }) {
 
       <section className="section-band">
         <div className="site-container section-grid">
-          <article className="panel">
+          <article className="panel portfolio-panel">
             <p className="panel-kicker">Portfolio</p>
             <h2 className="panel-title">Realizacje dopasowane do Twojego domu, firmy i inwestycji.</h2>
-            <p className="panel-body">Zobacz wybrane bramy, ogrodzenia i stalowe konstrukcje przygotowane przeze mnie z naciskiem na trwałość, detal i sprawny montaż.</p>
-            <a href="/portfolio/" className="panel-link">Przejdź do portfolio</a>
+            <p className="panel-body">Zobacz wybrane bramy, ogrodzenia i stalowe konstrukcje przygotowane przez nas z naciskiem na trwałość, detal i sprawny montaż.</p>
+            <a href="/portfolio/" className="btn-primary portfolio-link">Przejdź do portfolio</a>
           </article>
 
           <article className="panel">
             <p className="panel-kicker">Zakres prac</p>
-            <h2 className="panel-title">Obszary mojej specjalizacji</h2>
+            <h2 className="panel-title">Obszary naszej specjalizacji</h2>
             <ul className="panel-list">
               {homeCategories.map(category => (
                 <li key={category.key}><a href={category.path}>{category.label}</a></li>
@@ -105,10 +105,11 @@ export default function Home({ highlightContact = false }) {
             <p className="panel-kicker">Kontakt</p>
             <h2 className="panel-title">Porozmawiajmy o Twojej realizacji.</h2>
             <p className="panel-body">
-            Lokalizacja: <strong>Biecz</strong><br />
+            Siedziba: <strong>Korczyna</strong><br />
             Telefon / WhatsApp: <strong><a href="tel:+48513642695">+48 513 642 695</a></strong><br />
             E-mail: <a href="mailto:rofamet@op.pl" className="panel-link">rofamet@op.pl</a>
             </p>
+            <a href="https://maps.app.goo.gl/JwjqJC5aRfDt9JQPA" className="btn-primary contact-map-link" target="_blank" rel="noreferrer">Jak dojechać?</a>
           </article>
         </div>
       </section>
