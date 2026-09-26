@@ -9,7 +9,7 @@ export default function MebleLoft() {
       <div className="site-container">
         <CategoryNavigation activeCategoryKey="meble-loft" />
         <header className="category-intro">
-          <h1 className="portfolio-title">Meble loft na wymiar</h1>
+          <h1 className="portfolio-title">Meble loft</h1>
           <p className="portfolio-meta">
             Meble loft wykorzystują metalową konstrukcję jako wyrazisty element
             wnętrza. Mogą łączyć stal z drewnem, tworząc funkcjonalne meble

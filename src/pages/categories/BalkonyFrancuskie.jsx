@@ -9,7 +9,7 @@ export default function BalkonyFrancuskie() {
       <div className="site-container">
         <CategoryNavigation activeCategoryKey="balkony-francuskie" />
         <header className="category-intro">
-          <h1 className="portfolio-title">Balkony francuskie na wymiar</h1>
+          <h1 className="portfolio-title">Balkony francuskie</h1>
           <p className="portfolio-meta">
             Balkony francuskie zabezpieczają otwory okienne i stanowią ważny
             detal elewacji. Ich proporcje i forma są dopasowywane do konkretnego

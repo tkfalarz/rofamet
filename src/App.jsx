@@ -35,13 +35,11 @@ export default function App({ route = '/' }) {
   const normalizedRoute = normalizePath(route)
   const category = getCategoryByPath(normalizedRoute)
   const CategoryPage = category ? categoryPages[category.key] : null
-  const [isHeaderTransparent, setIsHeaderTransparent] = useState(
-    normalizedRoute === '/' || normalizedRoute === '/portfolio/'
-  )
+  const hasHero = normalizedRoute === '/' || normalizedRoute === '/portfolio/'
+  const [isHeaderTransparent, setIsHeaderTransparent] = useState(hasHero)
 
   // header transparency when over hero (transparent) and solid after scroll
   useEffect(() => {
-    const hasHero = normalizedRoute === '/' || normalizedRoute === '/portfolio/'
     function updateHeader() {
       if (!hasHero) {
         setIsHeaderTransparent(false)
@@ -52,10 +50,10 @@ export default function App({ route = '/' }) {
     updateHeader()
     window.addEventListener('scroll', updateHeader)
     return () => window.removeEventListener('scroll', updateHeader)
-  }, [normalizedRoute])
+  }, [hasHero])
 
   return (
-    <main className={`site-shell${CategoryPage ? " category-page-shell" : ""}`}>
+    <main className={`site-shell${hasHero ? ' hero-page-shell' : ''}${CategoryPage ? ' category-page-shell' : ''}`}>
       <header className={`site-header ${isHeaderTransparent ? 'header-transparent' : 'header-solid'}`}>
         <div className="header-inner">
           <a href="/" className="brand-mark" aria-label="Rofamet - strona główna">

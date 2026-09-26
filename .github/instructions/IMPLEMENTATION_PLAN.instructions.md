@@ -64,6 +64,7 @@ Enforcement checks (must pass after build)
 Operational notes
 - No analytics by default; leave hook points for later insertion.
 - Include `docs/CNAME` with `rofamet.pl` when ready.
+- During iterative development, use the running Vite dev server and HMR to review changes. Run `npm run build` only when the user explicitly requests a production build or deployment validation.
 
 Short actionable checklist for implementer
 1. Add `scripts/images-generate.js` and `scripts/generate-og.js` (sharp-based) following image pipeline rules.
