@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 
 import manifest from '../../assets/generated/manifest.json'
 import { categoryDefinitions, defaultCategory, getCategoryLabel } from '../lib/gallery-categories'
+import { portfolioMetadata } from '../lib/portfolio-metadata'
 import { withBase } from '../lib/site-paths'
 
 const asset = value => withBase(value)
@@ -21,6 +22,8 @@ function makeItemsFromManifest(manifestData) {
       const category = imageEntry?.category ?? defaultCategory
       const { src, srcset } = buildResponsiveImageData(imageEntry)
       const previewSrc = withBase((imageEntry?.variants ?? [])[Math.max((imageEntry?.variants ?? []).length - 2, 0)]?.webp ?? '')
+      const metadata = portfolioMetadata[filename]
+      const categoryLabel = getCategoryLabel(category)
 
       return {
         id: filename,
@@ -28,8 +31,10 @@ function makeItemsFromManifest(manifestData) {
         previewSrc,
         srcset,
         category,
-        categoryLabel: getCategoryLabel(category),
-        title: `Realizacja: ${getCategoryLabel(category)}`
+        categoryLabel,
+        title: metadata?.title ?? `Realizacja: ${categoryLabel}`,
+        alt: metadata?.alt ?? `Realizacja Rofamet: ${categoryLabel.toLowerCase()}`,
+        caption: metadata?.caption ?? `Realizacja w kategorii ${categoryLabel}.`
       }
     })
 }
@@ -189,8 +194,13 @@ export default function Portfolio({ category = null }) {
                     <div className="card-media">
                       <picture>
                         <source type="image/webp" srcSet={item.srcset} sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw" />
-                        <img src={item.previewSrc} alt={item.title} loading="lazy" decoding="async" />
+                        <img src={item.previewSrc} alt={item.alt} loading="lazy" decoding="async" />
                       </picture>
+                    </div>
+                    <div className="card-body">
+                      <p className="card-category">{item.categoryLabel}</p>
+                      <h2 className="card-title">{item.title}</h2>
+                      <p className="card-copy">{item.caption}</p>
                     </div>
                   </button>
                 </article>
@@ -229,8 +239,12 @@ export default function Portfolio({ category = null }) {
               <figure className="lightbox-figure">
                 <picture>
                   <source type="image/webp" srcSet={activeItem.srcset} sizes="100vw" />
-                  <img className="lightbox-image" src={activeItem.src} alt={activeItem.title} decoding="async" />
+                  <img className="lightbox-image" src={activeItem.src} alt={activeItem.alt} decoding="async" />
                 </picture>
+                <figcaption className="lightbox-caption">
+                  <strong>{activeItem.title}</strong>
+                  <span>{activeItem.caption}</span>
+                </figcaption>
               </figure>
 
               <button type="button" className="lightbox-nav lightbox-nav-next" onClick={showNext} aria-label="Następne zdjęcie">
