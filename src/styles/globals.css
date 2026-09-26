@@ -78,6 +78,10 @@ a:focus-visible {
 		box-shadow 220ms ease;
 }
 
+.category-page-shell .site-header {
+	margin-bottom: 0;
+}
+
 .header-transparent {
 	background: linear-gradient(180deg, rgba(229, 231, 235, 0.25), rgba(229, 231, 235, 0));
 }

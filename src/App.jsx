@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
+import ArchitekturaOgrodowa from './pages/categories/ArchitekturaOgrodowa'
+import BalkonyFrancuskie from './pages/categories/BalkonyFrancuskie'
+import Balustrady from './pages/categories/Balustrady'
+import Barierki from './pages/categories/Barierki'
+import Bramy from './pages/categories/Bramy'
+import Cnc from './pages/categories/Cnc'
+import KonstrukcjeStalowe from './pages/categories/KonstrukcjeStalowe'
+import MebleLoft from './pages/categories/MebleLoft'
+import Ogrodzenia from './pages/categories/Ogrodzenia'
 import logoMark from '../assets/raw/favicon.svg'
 import { getCategoryByPath } from './lib/gallery-categories'
 import './styles/globals.css'
@@ -10,16 +19,29 @@ function normalizePath(pathname = '/') {
   return pathname.endsWith('/') ? pathname : `${pathname}/`
 }
 
+const categoryPages = {
+  'architektura-ogrodowa': ArchitekturaOgrodowa,
+  'balkony-francuskie': BalkonyFrancuskie,
+  balustrady: Balustrady,
+  barierki: Barierki,
+  bramy: Bramy,
+  cnc: Cnc,
+  'konstrukcje-stalowe': KonstrukcjeStalowe,
+  'meble-loft': MebleLoft,
+  ogrodzenia: Ogrodzenia
+}
+
 export default function App({ route = '/' }) {
   const normalizedRoute = normalizePath(route)
   const category = getCategoryByPath(normalizedRoute)
+  const CategoryPage = category ? categoryPages[category.key] : null
   const [isHeaderTransparent, setIsHeaderTransparent] = useState(
-    normalizedRoute === '/' || normalizedRoute === '/portfolio/' || category !== null
+    normalizedRoute === '/' || normalizedRoute === '/portfolio/'
   )
 
   // header transparency when over hero (transparent) and solid after scroll
   useEffect(() => {
-    const hasHero = normalizedRoute === '/' || normalizedRoute === '/portfolio/' || category !== null
+    const hasHero = normalizedRoute === '/' || normalizedRoute === '/portfolio/'
     function updateHeader() {
       if (!hasHero) {
         setIsHeaderTransparent(false)
@@ -30,10 +52,10 @@ export default function App({ route = '/' }) {
     updateHeader()
     window.addEventListener('scroll', updateHeader)
     return () => window.removeEventListener('scroll', updateHeader)
-  }, [category, normalizedRoute])
+  }, [normalizedRoute])
 
   return (
-    <main className="site-shell">
+    <main className={`site-shell${CategoryPage ? " category-page-shell" : ""}`}>
       <header className={`site-header ${isHeaderTransparent ? 'header-transparent' : 'header-solid'}`}>
         <div className="header-inner">
           <a href="/" className="brand-mark" aria-label="Rofamet - strona główna">
@@ -56,8 +78,10 @@ export default function App({ route = '/' }) {
 
       {normalizedRoute === '/' ? (
         <Home />
-      ) : normalizedRoute === '/portfolio/' || category ? (
-        <Portfolio category={category} />
+      ) : normalizedRoute === '/portfolio/' ? (
+        <Portfolio />
+      ) : CategoryPage ? (
+        <CategoryPage />
       ) : (
         <section className="not-found">
           <p className="panel-kicker">404</p>
