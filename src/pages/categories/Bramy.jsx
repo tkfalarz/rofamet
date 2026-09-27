@@ -15,6 +15,13 @@ export default function Bramy() {
             Wykonujemy konstrukcje o prostej lub dekoracyjnej formie, dopasowane
             do charakteru budynku.
           </p>
+          <p className="portfolio-meta">
+            Przy ustalaniu realizacji liczą się wymiary wjazdu, układ posesji i
+            wygląd pozostałych elementów ogrodzenia. Wykonujemy bramy metalowe
+            dla klientów z Biecza, Gorlic, Jasła i okolic, z możliwością montażu.
+            W przypadku gotowych elementów sposób transportu i wysyłki ustalamy
+            indywidualnie.
+          </p>
         </header>
         <div>
           <CategoryGallery categoryKey="bramy" />

@@ -15,6 +15,13 @@ export default function MebleLoft() {
             wnętrza. Mogą łączyć stal z drewnem, tworząc funkcjonalne meble
             dopasowane do przestrzeni i sposobu użytkowania.
           </p>
+          <p className="portfolio-meta">
+            Realizujemy między innymi stoły loft, stelaże metalowe, łóżka i
+            inne elementy wyposażenia z metalu oraz drewna. Wymiary, układ
+            konstrukcji oraz wykończenie ustalamy na podstawie potrzeb
+            konkretnego wnętrza. Transport lub wysyłkę gotowych mebli ustalamy
+            indywidualnie w zależności od ich wielkości.
+          </p>
         </header>
         <div>
           <CategoryGallery categoryKey="meble-loft" />

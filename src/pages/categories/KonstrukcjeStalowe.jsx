@@ -15,6 +15,12 @@ export default function KonstrukcjeStalowe() {
             warunki przestrzenne. Forma zależy od funkcji oraz sposobu
             połączenia z pozostałymi elementami inwestycji.
           </p>
+          <p className="portfolio-meta">
+            Realizujemy konstrukcje stalowe dla budynków mieszkalnych,
+            gospodarczych, firm oraz innych obiektów wymagających trwałych
+            elementów ze stali. Zakres prac ustalamy z klientami z Biecza,
+            Gorlic, Jasła i okolic.
+          </p>
         </header>
         <div>
           <CategoryGallery categoryKey="konstrukcje-stalowe" />

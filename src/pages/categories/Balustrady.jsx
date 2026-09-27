@@ -15,6 +15,13 @@ export default function Balustrady() {
             konstrukcja może współgrać z drewnianą poręczą, a układ wypełnienia
             jest dopasowywany do schodów i przestrzeni.
           </p>
+          <p className="portfolio-meta">
+            Wykonujemy balustrady stalowe do nowych budynków oraz
+            modernizowanych wnętrz. Rozmiar, kształt i wygląd ustalamy na
+            podstawie miejsca, projektu lub przesłanych zdjęć i wymiarów dla
+            klientów z Biecza, Gorlic, Jasła i okolic. Gotowe elementy możemy
+            przygotować do wysyłki, jeśli realizacja nie wymaga naszego montażu.
+          </p>
         </header>
         <div>
           <CategoryGallery categoryKey="balustrady" />

@@ -15,6 +15,11 @@ export default function Barierki() {
             rozstaw elementów oraz wykończenie są dobierane do funkcji miejsca i
             otoczenia.
           </p>
+          <p className="portfolio-meta">
+            Wykonujemy barierki metalowe do schodów, wejść i podestów, o
+            prostym lub bardziej dekoracyjnym układzie. Punktem wyjścia mogą być
+            wymiary, zdjęcia miejsca albo gotowy projekt.
+          </p>
         </header>
         <div>
           <CategoryGallery categoryKey="barierki" />

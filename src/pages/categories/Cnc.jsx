@@ -15,6 +15,13 @@ export default function Cnc() {
             elementy użytkowe ze stali. Punktem wyjścia może być gotowy projekt
             albo wspólnie ustalony motyw.
           </p>
+          <p className="portfolio-meta">
+            Wykonujemy wycinanie wzorów z blachy, dekoracyjne panele, napisy i
+            detale metalowe, które mogą stanowić samodzielny element lub część
+            większej realizacji. Do wyceny przydadzą się wymiary, zdjęcia albo
+            projekt. Gotowe elementy po cięciu CNC możemy przygotować do
+            wysyłki na terenie Polski.
+          </p>
         </header>
         <div>
           <CategoryGallery categoryKey="cnc" />

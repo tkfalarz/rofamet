@@ -15,6 +15,13 @@ export default function BalkonyFrancuskie() {
             detal elewacji. Ich proporcje i forma są dopasowywane do konkretnego
             okna oraz architektury budynku.
           </p>
+          <p className="portfolio-meta">
+            Stalowe balkony francuskie sprawdzają się zarówno w nowych
+            budynkach, jak i przy modernizacji istniejących obiektów. Ustalamy
+            rozmiar, kształt oraz wygląd zabezpieczenia okiennego odpowiednio
+            do miejsca montażu. Gotowe balkony francuskie możemy przygotować do
+            wysyłki, zależnie od rodzaju i wielkości zamówienia.
+          </p>
         </header>
         <div>
           <CategoryGallery categoryKey="balkony-francuskie" />

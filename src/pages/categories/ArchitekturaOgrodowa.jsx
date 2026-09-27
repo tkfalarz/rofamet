@@ -15,6 +15,13 @@ export default function ArchitekturaOgrodowa() {
             przestrzeń wokół domu i nadać jej indywidualny charakter. Każdy
             projekt może łączyć funkcję użytkową z trwałym wykończeniem.
           </p>
+          <p className="portfolio-meta">
+            W tej kategorii znajdują się między innymi stalowe paleniska
+            ogrodowe, dekoracje z metalu i elementy uzupełniające ogród. Ich
+            forma oraz detal są ustalane z myślą o otoczeniu i planowanym
+            sposobie użytkowania. Mniejsze gotowe elementy możemy również
+            przygotować do wysyłki.
+          </p>
         </header>
         <div>
           <CategoryGallery categoryKey="architektura-ogrodowa" />
