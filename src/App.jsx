@@ -10,7 +10,8 @@ import Cnc from './pages/categories/Cnc'
 import KonstrukcjeStalowe from './pages/categories/KonstrukcjeStalowe'
 import MebleLoft from './pages/categories/MebleLoft'
 import Ogrodzenia from './pages/categories/Ogrodzenia'
-import logoMark from '../assets/raw/favicon.svg'
+import darkLogo from '../assets/raw/rofamet_dark_logo.svg'
+import whiteLogo from '../assets/raw/rofamet_white_logo.svg'
 import { getCategoryByPath } from './lib/gallery-categories'
 import './styles/globals.css'
 
@@ -57,13 +58,11 @@ export default function App({ route = '/' }) {
       <header className={`site-header ${isHeaderTransparent ? 'header-transparent' : 'header-solid'}`}>
         <div className="header-inner">
           <a href="/" className="brand-mark" aria-label="Rofamet - strona główna">
-            <span className="brand-badge" aria-hidden="true">
-              <img className="brand-badge-image" src={logoMark} alt="" />
-            </span>
-            <span className="brand-copy">
-              <span className="brand-name">Rofamet</span>
-              <span className="brand-tagline">Konstrukcje stalowe i bramy</span>
-            </span>
+            <img
+              className="brand-logo"
+              src={isHeaderTransparent ? whiteLogo : darkLogo}
+              alt="Rofamet - konstrukcje stalowe i bramy"
+            />
           </a>
 
           <nav className="site-nav" aria-label="Główna nawigacja">
