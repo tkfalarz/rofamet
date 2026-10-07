@@ -4,7 +4,7 @@ export const SITE_URL = 'https://rofamet.pl'
 
 const commonMetadata = {
   locale: 'pl_PL',
-  image: '/assets/generated/og/home.png'
+  image: '/og_image.jpg'
 }
 
 export const pageMetadata = {
@@ -16,14 +16,12 @@ export const pageMetadata = {
   '/portfolio/': {
     title: 'Portfolio realizacji stalowych | Rofamet - Biecz, Gorlice, Jasło',
     description: 'Zobacz realizacje: bramy, ogrodzenia, balustrady, konstrukcje stalowe i cięcie blach CNC. Lokalny montaż oraz wysyłka gotowych elementów.',
-    ...commonMetadata,
-    image: '/assets/generated/og/portfolio.png'
+    ...commonMetadata
   },
   ...Object.fromEntries(categoryDefinitions.map(category => [category.path, {
     title: category.title,
     description: category.description,
-    ...commonMetadata,
-    image: '/assets/generated/og/portfolio.png'
+    ...commonMetadata
   }]))
 }
 
@@ -45,7 +43,8 @@ export const localBusinessJsonLd = {
     { '@type': 'City', name: 'Biecz' },
     { '@type': 'City', name: 'Gorlice' },
     { '@type': 'City', name: 'Jasło' },
-    { '@type': 'AdministrativeArea', name: 'powiat gorlicki' }
+    { '@type': 'AdministrativeArea', name: 'powiat gorlicki' },
+    { '@type': 'AdministrativeArea', name: 'powiat jasielski' }
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

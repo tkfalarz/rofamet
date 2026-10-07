@@ -53,7 +53,9 @@ for (const route of routes) {
   )
 }
 
-await cp(path.join(projectRoot, 'assets', 'generated'), path.join(docsDir, 'assets', 'generated'), { recursive: true })
+const generatedAssetsDir = path.join(docsDir, 'assets', 'generated')
+await rm(generatedAssetsDir, { recursive: true, force: true })
+await cp(path.join(projectRoot, 'assets', 'generated'), generatedAssetsDir, { recursive: true })
 
 const sitemapEntries = routes
   .map(route => `  <url><loc>https://rofamet.pl${route}</loc></url>`)
