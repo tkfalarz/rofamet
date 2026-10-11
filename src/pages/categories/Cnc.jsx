@@ -10,17 +10,30 @@ export default function Cnc() {
         <CategoryNavigation activeCategoryKey="cnc" />
         <header className="category-intro">
           <h1 className="portfolio-title">Cięcie blach CNC</h1>
+          <h2 className="category-intro-title">CNC — co to jest?</h2>
           <p className="portfolio-meta">
-            Cięcie blach CNC pozwala tworzyć precyzyjne wzory, dekoracje i
-            elementy użytkowe ze stali. Punktem wyjścia może być gotowy projekt
-            albo wspólnie ustalony motyw.
+            CNC (ang. Computerized Numerical Control) to komputerowe sterowanie
+            numeryczne maszyną. Podczas wycinania blachy w technologii CNC
+            maszyna odwzorowuje kształty z projektu, co pozwala precyzyjnie
+            wycinać wzory w blasze i innych elementach metalowych.
           </p>
+          <h2 className="category-intro-title">
+            Co można wyciąć z blachy CNC?
+          </h2>
           <p className="portfolio-meta">
-            Wykonujemy wycinanie wzorów z blachy, dekoracyjne panele, napisy i
-            detale metalowe, które mogą stanowić samodzielny element lub część
-            większej realizacji. Do wyceny przydadzą się wymiary, zdjęcia albo
-            projekt. Gotowe elementy po cięciu CNC możemy przygotować do
-            wysyłki na terenie Polski.
+            Oferujemy cięcie blach stalowych z wykorzystaniem CNC oraz
+            wycinanie wzorów i kształtów z blachy. Wykonujemy dekoracyjne
+            panele, napisy i detale metalowe, które mogą być samodzielnymi
+            elementami lub częścią większej realizacji. Podstawą może być gotowy
+            projekt albo motyw ustalony wspólnie.
+          </p>
+          <h2 className="category-intro-title">
+            Jak zamówić wycinanie blachy CNC?
+          </h2>
+          <p className="portfolio-meta">
+            Aby otrzymać wycenę, prześlij projekt, wymiary lub zdjęcie
+            planowanego elementu. Gotowe detale możemy przygotować do wysyłki
+            na terenie Polski.
           </p>
         </header>
         <div>

@@ -31,8 +31,7 @@ function makeItemsFromManifest(manifestData) {
         category,
         categoryLabel,
         title: metadata?.title ?? `Realizacja: ${categoryLabel}`,
-        alt: metadata?.alt ?? `Realizacja Rofamet: ${categoryLabel.toLowerCase()}`,
-        caption: metadata?.caption ?? `Realizacja w kategorii ${categoryLabel}.`
+        alt: metadata?.alt ?? `Realizacja Rofamet: ${categoryLabel.toLowerCase()}`
       }
     })
 }

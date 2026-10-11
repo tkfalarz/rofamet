@@ -19,13 +19,13 @@ const homeHero = mainHeroEntry
   ? {
       ...buildResponsiveImageData(mainHeroEntry),
       sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
-      alt_pl: 'Brama stalowa'
+      alt_pl: 'Czarna stalowa balustrada schodowa z geometrycznym wypełnieniem i drewnianą poręczą'
     }
   : {
       src: asset('assets/raw/main-hero.jpg'),
       srcset: asset('assets/raw/main-hero.jpg'),
       sizes: '(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px',
-      alt_pl: 'Brama stalowa'
+      alt_pl: 'Czarna stalowa balustrada schodowa z geometrycznym wypełnieniem i drewnianą poręczą'
     }
 
 export const frontmatter = {

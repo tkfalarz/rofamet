@@ -32,7 +32,7 @@ function getHeroFromManifest(manifestData) {
       src,
       srcset,
       sizes: "(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px",
-      alt_pl: "Przykładowa realizacja z portfolio",
+      alt_pl: "Jasnoszare stalowe ogrodzenie z pionowymi szczeblinami wokół posesji",
     };
   }
 
@@ -40,7 +40,7 @@ function getHeroFromManifest(manifestData) {
     src: asset("og_image.jpg"),
     srcset: "",
     sizes: "(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1280px",
-    alt_pl: "Portfolio realizacji",
+    alt_pl: "Grafika Rofamet przedstawiająca spawanie konstrukcji stalowej",
   };
 }
 
