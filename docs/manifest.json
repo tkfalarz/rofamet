@@ -12,12 +12,12 @@
     "src": "assets/raw/rofamet_white_logo.svg"
   },
   "index.html": {
-    "file": "assets/index-d2MX5Bta.js",
+    "file": "assets/index-NbmvMfdK.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "css": [
-      "assets/index-B8Wv48vR.css"
+      "assets/index-CoODTdUS.css"
     ],
     "assets": [
       "assets/rofamet_dark_logo-D_gpwp4y.svg",
