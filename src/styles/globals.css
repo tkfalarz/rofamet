@@ -645,6 +645,107 @@ a:focus-visible {
 	margin: 0 0 2rem;
 }
 
+.local-page {
+	padding: 1.5rem 0 3rem;
+}
+
+.local-breadcrumb {
+	margin-bottom: 1.25rem;
+	color: var(--color-secondary);
+	font-size: 0.9rem;
+}
+
+.local-breadcrumb a:hover,
+.local-address a:hover {
+	color: var(--color-accent);
+	text-decoration: underline;
+}
+
+.local-intro {
+	display: grid;
+	grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+	gap: 2rem;
+	align-items: start;
+}
+
+.local-intro .portfolio-title {
+	line-height: 1.12;
+}
+
+.local-intro .panel,
+.local-reviews.panel {
+	grid-column: auto;
+}
+
+.local-lead {
+	margin: 1.5rem 0;
+	color: var(--color-secondary);
+	line-height: 1.8;
+}
+
+.local-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+	margin-top: 1.5rem;
+}
+
+.local-address {
+	font-style: normal;
+	overflow-wrap: anywhere;
+}
+
+.local-service-link {
+	display: inline-flex;
+	margin-top: 0.75rem;
+	color: var(--color-accent);
+	font-weight: 700;
+}
+
+.local-section {
+	margin-top: 2.5rem;
+}
+
+.local-map {
+	display: block;
+	width: 100%;
+	height: 360px;
+	margin-top: 1rem;
+	border: 1px solid var(--color-border);
+	background: var(--color-primary);
+}
+
+.local-rating {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.55rem;
+	margin: 1rem 0 0;
+	color: var(--color-secondary);
+}
+
+.local-rating > span:first-child {
+	color: var(--color-accent);
+	letter-spacing: 0.12em;
+}
+
+.local-rating strong {
+	color: var(--color-text);
+}
+
+@media (max-width: 960px) {
+	.local-intro {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+}
+
+@media (max-width: 720px) {
+	.local-map {
+		height: 320px;
+	}
+}
+
 .category-intro-title {
 	margin: 1.5rem 0 0;
 	font-size: clamp(1.35rem, 2vw, 1.75rem);
@@ -965,21 +1066,15 @@ a:focus-visible {
 
 	.site-nav {
 		width: 100%;
-		gap: 0.4rem;
+		gap: 0.2rem;
 	}
 
 	.site-nav a {
-		padding-left: 1.2rem;
-		padding-right: 1.2rem;
-		padding-top: 0.75rem;
-		padding-bottom: 0.75rem;
+		padding: 0.65rem;
 	}
 
 	.site-nav .nav-cta {
-		padding-left: 1.2rem;
-		padding-right: 1.2rem;
-		padding-top: 0.75rem;
-		padding-bottom: 0.75rem;
+		padding: 0.65rem;
 	}
 
 	.hero-content {

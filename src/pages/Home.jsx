@@ -164,7 +164,7 @@ export default function Home({ highlightContact = false }) {
             Telefon / WhatsApp: <strong><a href="tel:+48513642695">+48 513 642 695</a></strong><br />
             E-mail: <a href="mailto:rofamet@op.pl" className="panel-link">rofamet@op.pl</a>
             </p>
-            <a href="https://maps.app.goo.gl/JwjqJC5aRfDt9JQPA" className="btn-primary contact-map-link" target="_blank" rel="noreferrer">Jak dojechać?</a>
+            <a href="/local/" className="btn-primary contact-map-link">Adres i dojazd</a>
           </article>
         </div>
       </section>

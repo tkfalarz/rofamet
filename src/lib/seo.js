@@ -1,6 +1,9 @@
 import { categoryDefinitions } from './gallery-categories.js'
 
 export const SITE_URL = 'https://rofamet.pl'
+export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/26qFcVxjZM8PQidb8'
+export const GOOGLE_DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=49.7132066%2C21.2506982'
+export const GOOGLE_MAP_EMBED_URL = 'https://maps.google.com/maps?cid=16351661356036269392&output=embed'
 
 const commonMetadata = {
   locale: 'pl_PL',
@@ -18,6 +21,11 @@ export const pageMetadata = {
     description: 'Zobacz realizacje: bramy, ogrodzenia, balustrady, konstrukcje stalowe i cięcie blach CNC. Lokalny montaż oraz wysyłka gotowych elementów.',
     ...commonMetadata
   },
+  '/local/': {
+    title: 'Rofamet — Korczyna, Biecz | Bramy, ogrodzenia i balustrady',
+    description: 'Rofamet, Korczyna 286 koło Biecza. Bramy, ogrodzenia i balustrady z montażem w Bieczu, Gorlicach, Jaśle i okolicy. Sprawdź adres, dojazd i kontakt.',
+    ...commonMetadata
+  },
   ...Object.fromEntries(categoryDefinitions.map(category => [category.path, {
     title: category.title,
     description: category.description,
@@ -28,8 +36,16 @@ export const pageMetadata = {
 export const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  '@id': `${SITE_URL}/#business`,
   name: 'Rofamet',
   url: SITE_URL,
+  hasMap: GOOGLE_MAPS_URL,
+  sameAs: [GOOGLE_MAPS_URL],
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 49.7132066,
+    longitude: 21.2506982
+  },
   telephone: '+48 513 642 695',
   email: 'rofamet@op.pl',
   address: {

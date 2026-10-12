@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
+import Local from './pages/Local'
 import ArchitekturaOgrodowa from './pages/categories/ArchitekturaOgrodowa'
 import BalkonyFrancuskie from './pages/categories/BalkonyFrancuskie'
 import Balustrady from './pages/categories/Balustrady'
@@ -68,7 +69,7 @@ export default function App({ route = '/' }) {
           <nav className="site-nav" aria-label="Główna nawigacja">
             <a href="/">Start</a>
             <a href="/portfolio/">Realizacje</a>
-            <a className="nav-cta" href="/#contact-tile">Kontakt</a>
+            <a className="nav-cta" href="/local/">Kontakt</a>
           </nav>
         </div>
       </header>
@@ -77,6 +78,8 @@ export default function App({ route = '/' }) {
         <Home />
       ) : normalizedRoute === '/portfolio/' ? (
         <Portfolio />
+      ) : normalizedRoute === '/local/' ? (
+        <Local />
       ) : CategoryPage ? (
         <CategoryPage />
       ) : (
